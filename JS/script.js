@@ -126,10 +126,33 @@ cursorBlurOff.addEventListener("click", () => {
 
 const unsupportedInfo = document.getElementById("unsupportedInfo");
 const exitUnsupportedInfo = document.getElementById("exitUnsupportedInfo");
+const cursorDefaultUs = document.getElementById("cursorDefaultToggleOffUs");
+const cursorGlassUs = document.getElementById("cursorGlassToggleOnUs");
+const cursorBlurUs = document.getElementById("cursorBlurToggleOffUs");
 
 exitUnsupportedInfo.addEventListener("click", () => {
     unsupportedInfo.classList.remove("scale-[1]");
     unsupportedInfo.classList.add("scale-[0]");
     exitUnsupportedInfo.classList.remove("scale-[1]");
     exitUnsupportedInfo.classList.add("scale-[0]");
+})
+
+cursorDefaultUs.addEventListener("click", function(){
+    unsupportedInfo.classList.remove("scale-[0]");
+    unsupportedInfo.classList.add("scale-[1]");
+    exitUnsupportedInfo.classList.remove("scale-[0]");
+    exitUnsupportedInfo.classList.add("scale-[1]");
+})
+
+cursorGlassUs.addEventListener("click", function(){
+    unsupportedInfo.classList.remove("scale-[0]");
+    unsupportedInfo.classList.add("scale-[1]");
+    exitUnsupportedInfo.classList.remove("scale-[0]");
+    exitUnsupportedInfo.classList.add("scale-[1]");
+})
+cursorBlurUs.addEventListener("click", function(){
+    unsupportedInfo.classList.remove("scale-[0]");
+    unsupportedInfo.classList.add("scale-[1]");
+    exitUnsupportedInfo.classList.remove("scale-[0]");
+    exitUnsupportedInfo.classList.add("scale-[1]");
 })
