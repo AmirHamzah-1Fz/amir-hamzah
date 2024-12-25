@@ -2,9 +2,6 @@
 module.exports = {
   content: ['./index.html', './JS/script.js'],
   theme: {
-    container: {
-      center: true,
-    },
     extend: {
       colors: {
         'primary': '#1f1f1f',
