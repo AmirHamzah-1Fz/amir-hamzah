@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./src/output.css">
+
+    <!-- FONT INISIALIZATION -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Funnel+Display:wght@300..800&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Noto+Serif+JP:wght@200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+    <style>
+        html {
+            cursor: url('./assets/gfx/icons/Cursor/cursor-default.png'), auto;
+            scroll-behavior: smooth;
+        }
+
+        li, a {
+            cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;
+        }
+
+        #arrowRight::after {
+            content: '>';
+            margin-left: 8px;
+        }
+
+        /* h1, h2, h3, h4, h5, h6, p {
+            cursor: text;
+        } */
+
+    </style>
+
+</head>
+<body class="bg-[#fefefe] selection:bg-neutral-800 selection:text-neutral-200 overflow-x-hidden font-jost">
+
+    <!-- GRID BACKGROUND -->
+    <div class="w-full pt-4 max-sm:pt-0 h-[600px] opacity-[85%] overflow-hidden absolute select-none -z-[999]">
+        <img src="assets\img\grid-bg.png" alt="grid" class="min-h-[600px] max-sm:min-w-[600px] bg-center">
+    </div>
+    
+    <!-- CURSOR -->
+    <div id="round" class="absolute w-[84px] h-[84px] bg-[#ffffff04] backdrop-blur-sm rounded-full -translate-x-7 shadow-lg -translate-y-6 pointer-events-none overflow-hidden z-10">
+        <div class="w-1/2 h-full bg-[#00000070] relative -right-24 blur-3xl"></div>
+        <div class="w-1/2 h-full bg-[#ffffff] relative right-14 blur-3xl"></div>
+    </div>
+
+    <div id="roundBlur" class="hidden absolute w-[424px] h-[424px] bg-transparent backdrop-blur-sm rounded-full -translate-x-32 shadow-lg -translate-y-6 opacity-90 animate-pulse blur-2xl pointer-events-none overflow-hidden -z-10">
+        <div class="w-1/2 h-1/2 bg-red-500 blur-3xl opacity-70"></div>
+        <div class="w-1/2 h-1/2 float-right bg-blue-500 blur-3xl  opacity-50"></div>
+        <div class="w-1/2 h-1/2 float-right bg-indigo-500 blur-3xl opacity-100"></div>
+    </div>
+
+    <!-- BOTTOM  BAR -->
+
+    <div class="fixed bottom-0 w-full h-[90px] bg-gradient-to-t from-white to-transparent z-[900]"></div>
+
+    <ul class="relative flex justify-end z-[999]">
+            <div class="fixed flex justify-end gap-2 right-8 bottom-4">
+
+                <li id="cursorDefaultToggleOff" class=""><img src="assets\gfx\icons\Cursor\cursor-toggle-default-outline.png" alt="default" class="w-[28px] h-[28px]"></li>
+
+                <li id="cursorDefaultToggleOn" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
+
+                <li id="cursorGlassToggleOff" class="hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-glass-outline.png" alt="glass" class="w-[28px] h-[28px]"></li>
+
+                <li id="cursorGlassToggleOn" class=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
+
+                <li id="cursorBlurToggleOff" class=""><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[28px] h-[28px]"></li>
+
+                <li id="cursorBlurToggleOn" class="hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[28px] h-[28px]"></li>
+
+                <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="notifications" class="flex items-center ml-4 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
+                </li>
+            </div>
+    </ul>
+    
+    <!-- ================   NAVBAR START    ==================================== -->
+
+    <div class="w-full fixed top-0 left-0 right-0 shadow-sm bg-[#fefefea0] backdrop-blur-sm z-[999]">
+        <nav class="w-full flex justify-center items-center px-[7%] py-3">
+
+            <div class="w-full flex justify-between items-center gap-6">
+
+                <ul class="w-full flex items-center">
+                    <a href="#home">
+                    <li class="text-2xl text-primary font-bold">AmirHamzah.</li>
+                </a>
+            </ul>
+            
+            <ul class="relative w-full flex justify-end items-center gap-4">
+                <div class="relative flex justify-center items-center">
+
+                    <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="themeToggle" class="flex items-center gap-2 cursor-pointer px-2 py-1 hover:bg-primary hover:text-white hover:fill-white rounded-lg">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                        
+                        <svg class="hover:fill-white" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 20.5 14"><path d="M10.28,14a1,1,0,0,1-.8-.39L.21,1.61A1,1,0,0,1,1.79.39l8.48,11,8.44-11a1,1,0,0,1,1.58,1.22l-9.22,12a1,1,0,0,1-.79.39Z" style="fill:#010201 stroke"/></svg>
+                    </li>
+
+                    <div id="themeItems" class="w-[130px] h-[0px] overflow-hidden flex justify-center items-center absolute top-11 px-3 py-0 bg-[#ffffffcf] max-sm:bg-[#fffffffa] shadow-md rounded-xl transition-all duration-300 ease-in-out">
+                        <ul class="flex flex-col gap-1">
+                            <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="lightMode" class="flex flex-row gap-1 px-2 py-1 rounded-md hover:bg-primary hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                                
+                                <p class="text-sm">LightMode</p>
+                            </li>
+                            <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="darkMode" class="flex flex-row gap-1 px-2 py-1 rounded-md hover:bg-primary hover:text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+
+                                <p class="text-sm">DarkMode</p>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                
+            <div style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" class="relative flex justify-center">
+                <li><svg id="hamburgerMenu" xmlns="http://www.w3.org/2000/svg" width="22" height="12" viewBox="0 0 27.08 15.08"><line x1="1.54" y1="1.54" x2="25.54" y2="1.54" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3.075716724395192px"/><line x1="13.54" y1="13.54" x2="25.54" y2="13.54" style="fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:3.075716724395192px"/></svg></li>
+
+                <div id="menuitemDrop" class="h-0 text-sm flex items-center overflow-hidden absolute max-sm:right-1 top-11 py-0 px-12 leading-loose bg-[#ffffffcf] max-sm:bg-[#fffffffa] shadow-md rounded-xl transition-all duration-300 ease-in-out origin-top">
+
+                    <div style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="exitMenuBox" class="absolute cursor-pointer top-0 right-0 px-3 py-3 hover:bg-neutral-200 rounded-lg">
+                        <svg id="exitMenu" class="relative -top-12 transition-all duration-300 ease-in-out" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 25.66 25.66"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="1" y1="1" x2="24.66" y2="24.66"/><line class="cls-1" x1="1" y1="24.49" x2="24.35" y2="1.15"/></g></g></svg>
+                    </div>
+
+                    <ul>
+                        <a href="#home">
+                            <li class="px-1 rounded-lg hover:bg-primary hover:text-white w-fit">Home</li>
+                        </a>
+                        <a href="#about">
+                            <li class="px-1 rounded-lg hover:bg-primary hover:text-white w-fit">About</li>
+                        </a>
+                        <a href="#projects">
+                            <li class="px-1 rounded-lg hover:bg-primary hover:text-white w-fit">Projects</li>
+                        </a>
+                        <a href="#skills">
+                            <li class="px-1 rounded-lg hover:bg-primary hover:text-white w-fit">Skills</li>
+                        </a>
+                        <a href="#experience">
+                            <li class="px-1 rounded-lg hover:bg-primary hover:text-white w-fit">Experience</li>
+                        </a>
+                        <a href="#education">
+                            <li class="px-1 rounded-lg hover:bg-primary hover:text-white w-fit">Education</li>
+                        </a>
+                        <a href="#contact">
+                            <li class="px-1 rounded-lg hover:bg-primary hover:text-white w-fit">Contact</li>
+                        </a>
+                    </ul>
+                </div>
+
+            </div>    
+            </ul>
+
+           
+        </div>
+        </nav>
+    </div>
+
+    <!-- ================   NAVBAR END    ==================================== -->
+
+
+    <!-- ================   HOME SECTION    ==================================== -->
+<section id="home" class="">
+    <div class="pt-36">
+        <div class="w-full flex flex-wrap justify-center self-center px-[5%]">
+            <div class="w-2/3 max-sm:w-full">
+                <h1 class="font-bold leading-snug text-center text-primary text-5xl">Hi, my name is <span class="text-primary">Amir Hamzah</span>. I'am "Creative" <span class="">Front-End Designer</span>.</h1>
+                <div class="w-full flex flex-col justify-center">
+                    <p class="max-w-[90%] text-sm text-center mt-6 font-medium text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore id quasi exercitationem nesciunt accusantium aliquam nam illo. Error, veritatis corporis!</p>
+
+                    <div class="w-full mt-10 flex justify-center items-center gap-4">
+                        <a href="#about" class="px-8 py-3 max-sm:px-6 bg-primary text-white text-xs hover:shadow-md">About me</a>
+                        <a id="arrowRight" href="#contact" class="px-8 py-3 max-sm:px-6 bg-transparent border-[1px] border-primary text-primary text-xs">Let's Collaborate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
