@@ -774,6 +774,10 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 @keyframes pulse {
   50% {
     opacity: .5;
@@ -1222,6 +1226,10 @@ video {
     right: 0.25rem;
   }
 
+  .max-sm\:ml-2 {
+    margin-left: 0.5rem;
+  }
+
   .max-sm\:w-full {
     width: 100%;
   }
@@ -1239,4 +1247,7 @@ video {
     padding-right: 1.5rem;
   }
 
-  .max-sm\
+  .max-sm\:pt-0 {
+    padding-top: 0px;
+  }
+}
