@@ -907,6 +907,14 @@ video {
   width: 160px;
 }
 
+.w-\[158px\] {
+  width: 158px;
+}
+
+.w-\[156px\] {
+  width: 156px;
+}
+
 .min-w-\[32px\] {
   min-width: 32px;
 }
