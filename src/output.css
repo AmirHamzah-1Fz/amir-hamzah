@@ -903,6 +903,10 @@ video {
   width: 154px;
 }
 
+.w-\[160px\] {
+  width: 160px;
+}
+
 .min-w-\[32px\] {
   min-width: 32px;
 }
@@ -1243,6 +1247,10 @@ video {
 
 .font-jost {
   font-family: jost, sans-serif;
+}
+
+.font-hostg {
+  font-family: Host Grotesk, serif;
 }
 
 .text-2xl {
