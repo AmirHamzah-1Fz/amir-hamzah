@@ -123,3 +123,13 @@ cursorBlurOff.addEventListener("click", () => {
     cursorDot.classList.add("hidden");
     cursorBlur.classList.remove("hidden");
 })
+
+const unsupportedInfo = document.getElementById("unsupportedInfo");
+const exitUnsupportedInfo = document.getElementById("exitUnsupportedInfo");
+
+exitUnsupportedInfo.addEventListener("click", () => {
+    unsupportedInfo.classList.remove("scale-[1]");
+    unsupportedInfo.classList.add("scale-[0]");
+    exitUnsupportedInfo.classList.remove("scale-[1]");
+    exitUnsupportedInfo.classList.add("scale-[0]");
+})

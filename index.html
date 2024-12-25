@@ -12,18 +12,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Funnel+Display:wght@300..800&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Noto+Serif+JP:wght@200..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Funnel+Display:wght@300..800&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Noto+Serif+JP:wght@200..900&family=Space+Grotesk:wght@300..700&display=swap');
+
         html {
             cursor: url('./assets/gfx/icons/Cursor/cursor-default.png'), auto;
             scroll-behavior: smooth;
         }
 
-        li, a {
+        li, a, svg {
             cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;
         }
 
         #arrowRight::after {
             content: '>';
             margin-left: 8px;
+        }
+
+        img {
+            user-select: none;
+            -webkit-user-drag: none;
         }
 
         /* h1, h2, h3, h4, h5, h6, p {
@@ -33,7 +41,7 @@
     </style>
 
 </head>
-<body class="bg-[#fefefe] selection:bg-neutral-800 selection:text-neutral-200 overflow-x-hidden *:font-jost">
+<body class="bg-[#fefefe] h-[1280px] selection:bg-neutral-800 selection:text-neutral-200 overflow-x-hidden font-jost">
 
     <!-- GRID BACKGROUND -->
     <div class="w-full pt-4 max-sm:pt-0 h-[540px] opacity-[85%] overflow-hidden absolute select-none -z-[999]">
@@ -41,39 +49,65 @@
     </div>
     
     <!-- CURSOR -->
-<div class="absolute w-full h-full overflow-hidden">
-    <div id="round" class="absolute w-[84px] h-[84px] bg-[#ffffff04] backdrop-blur-sm rounded-full -translate-x-7 shadow-lg -translate-y-6 pointer-events-none overflow-hidden z-10">
+
+    <div id="round" class="absolute w-[84px] h-[84px] max-md:hidden bg-[#ffffff04] backdrop-blur-sm rounded-full -translate-x-7 shadow-lg -translate-y-6 pointer-events-none overflow-hidden z-10">
         <div class="w-1/2 h-full bg-[#00000070] relative -right-24 blur-3xl"></div>
         <div class="w-1/2 h-full bg-[#ffffff] relative right-14 blur-3xl"></div>
     </div>
 
-    <div id="roundBlur" class="hidden absolute w-[424px] h-[424px] bg-transparent backdrop-blur-sm rounded-full -translate-x-32 shadow-lg -translate-y-6 opacity-90 animate-pulse blur-2xl pointer-events-none overflow-hidden -z-10">
+    <div id="roundBlur" class="hidden absolute max-md:hidden w-[424px] h-[424px] bg-transparent backdrop-blur-sm rounded-full -translate-x-32 shadow-lg -translate-y-6 opacity-90 animate-pulse blur-2xl pointer-events-none overflow-hidden -z-10">
         <div class="w-1/2 h-1/2 bg-red-500 blur-3xl opacity-70"></div>
         <div class="w-1/2 h-1/2 float-right bg-blue-500 blur-3xl  opacity-50"></div>
         <div class="w-1/2 h-1/2 float-right bg-indigo-500 blur-3xl opacity-100"></div>
     </div>
-</div>
+
     <!-- BOTTOM  BAR -->
 
-    <!-- <div class="fixed bottom-0 w-full h-[100px] bg-gradient-to-t from-white to-transparent z-[900]"></div> -->
+    <div class="md:hidden fixed bottom-0 w-full h-[110px] bg-gradient-to-t from-white to-transparent z-[900]"></div>
 
     <ul class="relative flex justify-end z-[999]">
-            <div class="fixed flex justify-end gap-2 right-8 bottom-4">
+            <div class="fixed flex justify-end gap-2 max-md:right-4 max-sm:right-2 bottom-4 ">
 
-                <li id="cursorDefaultToggleOff" class=""><svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
+            <div id="bottomSupported" class="flex justify-end gap-2">
+                <li id="cursorDefaultToggleOff" class="max-md:hidden"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
 
-                <li id="cursorDefaultToggleOn" class="hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
+                <li id="cursorDefaultToggleOn" class="hidden max-md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
 
-                <li id="cursorGlassToggleOff" class="hidden"><svg width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><circle cx="11.55" cy="10.21" r="5.11" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="10.56 20.53 10.55 8.65 19.54 16.57 14.44 17.25 10.56 20.53"/></svg></li>
+                <li id="cursorGlassToggleOff" class="hidden max-md:hidden"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><circle cx="11.55" cy="10.21" r="5.11" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="10.56 20.53 10.55 8.65 19.54 16.57 14.44 17.25 10.56 20.53"/></svg></li>
 
-                <li id="cursorGlassToggleOn" class=""><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
+                <li id="cursorGlassToggleOn" class="max-md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
 
-                <li id="cursorBlurToggleOff" class=""><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[28px] h-[28px]"></li>
+                <li id="cursorBlurToggleOff" class="max-md:hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px]"></li>
 
-                <li id="cursorBlurToggleOn" class="hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[28px] h-[28px]"></li>
+                <li id="cursorBlurToggleOn" class="hidden max-md:hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[32px] h-[32px]"></li>
+            </div>
+
+            <div id="bottomUnsupported" class="flex justify-end items-center md:hidden grayscale-[100%] gap-2">
+
+                <li id="unsupportedInfo" class="scale-[1] transition-all duration-200 ease-in-out origin-right">
+                    <div class="w-[154px] h-[42px] flex justify-between items-center rounded-xl bg-primary overflow-hidden px-3 py-1"><h3 class="text-white font-light text-xs">Fitur ini hanya tersedia di versi desktop.</h3>
+
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 25.66 25.66"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="1" y1="1" x2="24.66" y2="24.66"/><line class="cls-1" x1="1" y1="24.49" x2="24.35" y2="1.15"/></g></g></svg></div>
+                </li>
+
+                <li id="exitUnsupportedInfo" class=""><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 25.66 25.66"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="1" y1="1" x2="24.66" y2="24.66"/><line class="cls-1" x1="1" y1="24.49" x2="24.35" y2="1.15"/></g></g></svg></li>
+
+                <li id="cursorDefaultToggleOffUs" class=""><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
+
+                <li id="cursorDefaultToggleOnUs" class="hidden "><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
+
+                <li id="cursorGlassToggleOffUs" class="hidden "><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><circle cx="11.55" cy="10.21" r="5.11" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="10.56 20.53 10.55 8.65 19.54 16.57 14.44 17.25 10.56 20.53"/></svg></li>
+
+                <li id="cursorGlassToggleOnUs" class=""><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
+
+                <li id="cursorBlurToggleOffUs" class=""><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] min-w-[32px] min-h-[32px]"></li>
+
+                <li id="cursorBlurToggleOn" class="hidden "><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[32px] h-[32px]"></li>
+            </div>
+            
 
                 <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="notifications" class="flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
                 </li>
             </div>
     </ul>
@@ -166,10 +200,11 @@
 <section id="home" class="">
     <div class="pt-36">
         <div class="w-full flex flex-wrap justify-center self-center px-[5%]">
-            <div class="w-2/3 max-sm:w-full">
-                <h1 class="font-bold leading-snug text-center text-primary text-5xl">Hi, my name is <span class="text-primary">Amir Hamzah</span>. I'am "Creative" <span class="">Front-End Designer</span>.</h1>
-                <div class="w-full flex flex-col justify-center">
-                    <p class="max-w-[90%] text-sm text-center mt-6 font-medium text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore id quasi exercitationem nesciunt accusantium aliquam nam illo. Error, veritatis corporis!</p>
+            <div class="w-2/3 max-md:w-full">
+                <h1 class="font-bold leading-snug text-center text-primary text-5xl max-sm:">Hi, my name is <span class="text-primary">Amir Hamzah</span>. I'am "Creative" <span class="">Front-End Designer</span>.</h1>
+                <div class="w-full flex justify-center">
+                    <p class="w-[80%] max-lg:w-[100%] text-sm text-center mt-6 font-medium text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore id quasi exercitationem nesciunt accusantium aliquam nam illo. Error, veritatis corporis!</p>
+                </div>
 
                     <div class="w-full mt-10 flex justify-center items-center gap-4">
                         <a href="#about" class="px-8 py-3 max-sm:px-6 bg-primary text-white text-xs hover:shadow-md">About me</a>
