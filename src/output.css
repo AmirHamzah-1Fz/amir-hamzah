@@ -1826,6 +1826,11 @@ video {
   .max-sm\:pt-0 {
     padding-top: 0px;
   }
+
+  .max-sm\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
