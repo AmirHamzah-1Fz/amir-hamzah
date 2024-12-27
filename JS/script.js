@@ -53,28 +53,6 @@ function exitMenuF(){
     singleArrowBottomTheme.classList.remove("hidden");
 }
 
-document.getElementById("itemMenu").addEventListener("click", () => {
-    exitMenuF()
-})
-document.getElementById("itemMenuTwo").addEventListener("click", () => {
-    exitMenuF()
-})
-document.getElementById("itemMenuThree").addEventListener("click", () => {
-    exitMenuF()
-})
-document.getElementById("itemMenuFour").addEventListener("click", () => {
-    exitMenuF()
-})
-document.getElementById("itemMenuFive").addEventListener("click", () => {
-    exitMenuF()
-})
-document.getElementById("itemMenuSix").addEventListener("click", () => {
-    exitMenuF()
-})
-document.getElementById("itemMenuProjects").addEventListener("click", () => {
-    exitMenuF()
-})
-
 const menu = document.getElementById("hamburgerMenu");
 const menuItem = document.getElementById("menuitemDrop");
 const exitMenu = document.getElementById("exitMenu");
