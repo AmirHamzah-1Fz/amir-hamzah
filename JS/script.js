@@ -450,6 +450,8 @@ cursorDefaultOff.addEventListener("click", () => {
     cursorBlurOn.classList.add("hidden");
     cursorBlurOff.classList.remove("hidden");
     cursorBlur.classList.add("hidden");
+    dotOutline.classList.remove("hidden");
+    amimir.classList.remove("hidden");
 })
 
 cursorGlassOff.addEventListener("click", function(){
@@ -461,6 +463,8 @@ cursorGlassOff.addEventListener("click", function(){
     cursorBlurOn.classList.add("hidden");
     cursorBlurOff.classList.remove("hidden");
     cursorBlur.classList.add("hidden");
+    dotOutline.classList.remove("hidden");
+    amimir.classList.remove("hidden");
 })
 
 cursorBlurOff.addEventListener("click", () => {
@@ -472,6 +476,8 @@ cursorBlurOff.addEventListener("click", () => {
     cursorDefaultOff.classList.remove("hidden");
     cursorDot.classList.add("hidden");
     cursorBlur.classList.remove("hidden");
+    dotOutline.classList.add("hidden");
+    amimir.classList.add("hidden");
 })
 
 const unsupportedInfo = document.getElementById("unsupportedInfo");
