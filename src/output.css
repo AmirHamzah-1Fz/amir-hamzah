@@ -2835,6 +2835,14 @@ video {
     margin-left: 0.5rem;
   }
 
+  .max-sm\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
+  .max-sm\:mb-5 {
+    margin-bottom: 1.25rem;
+  }
+
   .max-sm\:max-h-full {
     max-height: 100%;
   }
@@ -2900,6 +2908,10 @@ video {
     gap: 2.5rem;
   }
 
+  .max-sm\:gap-16 {
+    gap: 4rem;
+  }
+
   .max-sm\:bg-\[\#fffffffa\] {
     background-color: #fffffffa;
   }
@@ -2923,6 +2935,28 @@ video {
 
   .max-sm\:text-\[1rem\] {
     font-size: 1rem;
+  }
+
+  .max-sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .max-sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .max-sm\:font-bold {
+    font-weight: 700;
+  }
+
+  .max-sm\:font-extralight {
+    font-weight: 200;
+  }
+
+  .max-sm\:font-extrabold {
+    font-weight: 800;
   }
 
   .max-sm\:opacity-\[20\%\] {
