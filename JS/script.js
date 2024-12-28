@@ -181,6 +181,7 @@ window.addEventListener("scroll", () => {
     themeItems.classList.remove("py-2");
     themeItems.classList.add("h-[0px]");
     themeItems.classList.add("py-0");
+    exitChatBoxBottom()
 })
 
 // CURSOR
