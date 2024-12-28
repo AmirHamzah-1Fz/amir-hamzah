@@ -42,6 +42,11 @@
             }
         }
 
+        #notificationBox {
+            overflow-y: scroll;
+            scrollbar-width: none;
+        }
+
         li, a, svg {
             cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;
         }
@@ -63,7 +68,7 @@
     </style>
 
 </head>
-<body id="body" class="bg-[#fafafa] dark:bg-dark-bg dark:selection:bg-neutral-800 dark:selection:text-neutral-300 selection:bg-neutral-800 selection:text-neutral-200 overflow-x-hidden">
+<body id="body" class="bg-[#f9f9f9] dark:bg-dark-bg dark:selection:bg-neutral-800 dark:selection:text-neutral-300 selection:bg-neutral-800 selection:text-neutral-200 overflow-x-hidden">
 
     <!-- ================   NAVBAR START    ==================================== -->
 
@@ -225,7 +230,7 @@
             </div>
 
             <div class="w-full flex justify-center self-center flex-wrap">
-                <div class="w-[90%]  max-md:w-[100%] max-sm:w-[95%] flex flex-row-reverse justify-between self-center flex-wrap mb-24 max-md:mb-10 max-sm:mb-8">
+                <div class="w-[90%]  max-md:w-[100%] max-sm:w-[95%] flex flex-row-reverse justify-between self-center flex-wrap max-md:mb-10 max-sm:mb-8">
                     
                     <div class="w-[45%] max-h-[280px] max-sm:max-h-full transition duration-300 ease-in-out aspect-video max-sm:w-full max-md:mb-10 max-sm:mb-8 flex-shrink-0 overflow-hidden rounded-lg">
                         <img id="certificate" src="assets\img\Certificate.jpg" alt="Ava Studio Yogyakarta" class="relative grayscale -top-16 hover:scale-[1.3] hover:grayscale-0 bg-cover min-h-[290px] max-sm:min-w-full max-lg:min-h-[350px] transition duration-300 ease-in-out">
@@ -238,67 +243,40 @@
                 </div>
             </div>
 
-            <!-- <div class="w-full flex justify-center self-center flex-wrap">
-                <div class="w-[90%] max-md:w-[100%] max-sm:w-[95%] flex justify-between self-center flex-wrap mb-20 max-md:mb-10 max-sm:mb-8">
-                    
-                    <div class="w-[45%] max-h-[280px] max-sm:max-h-full transition duration-300 ease-in-out aspect-video max-sm:w-full max-md:mb-10 max-sm:mb-8 flex-shrink-0 overflow-hidden rounded-lg">
-                        <img src="assets\img\AVA studio.jpg" alt="Ava Studio Yogyakarta" class="relative -top-10 grayscale hover:scale-[1.3] hover:grayscale-0 bg-cover min-w-[200px] max-sm:min-w-full transition duration-300 ease-in-out">
-                    </div>
-                <div class="w-[45%] max-sm:w-full max-sm:mb-10 flex-shrink-0">
-                    <h3 class="text-xl dark:text-dark-el-fade font-bold mb-2">Ava Studio</h3>
-                    <h3 class="text-3xl dark:text-dark-el font-bold mb-3">At Yogyakarta, Indonesia</h3>
-                    <p class="text-base text-neutral-500">Kegiatan ini merupakan bagian dari kurikulum sekolah yang memberikan banyak wawasan penting dalam dunia kerja serta pengenalan properti alat kerja di sebuah perusahaan. Mengunjungi Balai Teknologi Komunikasi Digital (BTKP) yang bertanggung jawab sebagai media edukasi berbasis teknologi.</p>
-                </div>
-                </div>
-            </div>
-
-            <div class="w-full flex justify-center self-center flex-wrap">
-                <div class="w-[90%] max-md:w-[100%] max-sm:w-[95%] flex justify-between self-center flex-wrap mb-20 max-md:mb-10 max-sm:mb-8">
-                    
-                    <div class="w-[45%] max-h-[280px] max-sm:max-h-full relative transition duration-300 ease-in-out aspect-video max-sm:w-full max-md:mb-10 max-sm:mb-8 flex-shrink-0 overflow-hidden rounded-lg">
-                        <img src="assets\img\ITFest workshop.jpg" alt="Ava Studio Yogyakarta" class="relative grayscale hover:scale-[1.3] hover:grayscale-0 bg-cover w-auto h-auto bg-center min-w-[200px] max-sm:min-w-full transition duration-300 ease-in-out">
-                    </div>
-                <div class="w-[45%] max-sm:w-full max-sm:mb-10 flex-shrink-0">
-                    <h3 class="text-xl dark:text-dark-el-fade font-bold mb-2">IT Fest Workshop</h3>
-                    <h3 class="text-3xl dark:text-dark-el font-bold mb-3">At Cibiru, Bandung</h3>
-                    <p class="text-base text-neutral-500">Kegiatan ini merupakan kegiatan literasi digital yang membahas tentang bagaimana cara kerja suatu website hingga microsite.</p>
-                </div>
-                </div>
-            </div> -->
-
         </div>
     </div>
 </section>
 
 <section id="skills" class="">
-    <div class="container">
-        <div class="w-full flex justify-center flex-wrap self-center gap-y-10">
-
-            <div class="w-full flex justify-start items-center flex-col gap-2">
-                <h2 class="text-2xl text-primary font-semibold dark:text-dark-el">Skills & Expertise</h2>
-                <p class="text-lg text-neutral-500 dark:text-dark-el-fade">I'am still learning even I got in a work time.</p>
-            </div>
-
-            <div class="w-3/4 grid grid-cols-4 grid-rows-1 max-md:grid-cols-2 max-md:grid-rows-2 max-sm:grid-cols-2 max-sm:grid-rows-2 gap-3">
-                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
-                    <img src="assets\gfx\ui\code.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
-
-                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">Web Development</h3>
+    <div class="container pt-32 max-md:pt-6">
+        <div class="w-full flex justify-center flex-wrap self-center">
+            <div class="w-[75%] max-sm:w-[80%] flex justify-center flex-col gap-y-6">
+                <div class="w-full flex justify-start items-center flex-col gap-2">
+                    <h2 class="text-2xl text-center text-primary font-extrabold dark:text-dark-el">Skills & Expertise</h2>
+                    <p class="text-base text-center text-neutral-500 dark:text-dark-el-fade">Explore some skills I'm proficient in to deliver high-quality solutions.</p>
                 </div>
-                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
-                    <img src="assets\gfx\ui\layout.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
 
-                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">UI/UX Design</h3>
-                </div>
-                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
-                    <img src="assets\gfx\ui\pen-tool.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
+                <div class="w-full grid grid-cols-4 grid-rows-1 max-md:grid-cols-2 max-md:grid-rows-2 max-sm:grid-cols-2 max-sm:grid-rows-2 gap-1">
+                    <div class="w-full flex justify-center items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent dark:hover:border-neutral-700 hover:bg-neutral-200 hover:border-neutral-300 hover:scale-[1.080] dark:hover:bg-dark-bg-up transition duration-200 ease-in-out">
+                        <img src="assets\gfx\ui\code.svg" width="40px" height="40px" alt="ui" class="mb-2 dark:invert">
 
-                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">Graphic Design</h3>
-                </div>
-                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
-                    <img src="assets\gfx\ui\user.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
+                        <h3 class="text-base font-medium text-primary text-center dark:text-dark-el">Web Development</h3>
+                    </div>
+                    <div class="w-full flex justify-center items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent dark:hover:border-neutral-700 hover:bg-neutral-200 hover:border-neutral-300 hover:scale-[1.080] dark:hover:bg-dark-bg-up transition duration-200 ease-in-out">
+                        <img src="assets\gfx\ui\layout.svg" width="40px" height="40px" alt="ui" class="mb-2 dark:invert">
 
-                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">Illustration</h3>
+                        <h3 class="text-base font-medium text-primary text-center dark:text-dark-el">UI/UX Design</h3>
+                    </div>
+                    <div class="w-full flex justify-center items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent dark:hover:border-neutral-700 hover:bg-neutral-200 hover:border-neutral-300 hover:scale-[1.080] dark:hover:bg-dark-bg-up transition duration-200 ease-in-out">
+                        <img src="assets\gfx\ui\pen-tool.svg" width="40px" height="40px" alt="ui" class="mb-2 dark:invert">
+
+                        <h3 class="text-base font-medium text-primary text-center dark:text-dark-el">Graphic Design</h3>
+                    </div>
+                    <div class="w-full flex justify-center items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent dark:hover:border-neutral-700 hover:bg-neutral-200 hover:border-neutral-300 hover:scale-[1.080] dark:hover:bg-dark-bg-up transition duration-200 ease-in-out">
+                        <img src="assets\gfx\ui\user.svg" width="40px" height="40px" alt="ui" class="mb-2 dark:invert">
+
+                        <h3 class="text-base font-medium text-primary text-center dark:text-dark-el">Illustration</h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,9 +284,9 @@
 
 <section id="techStack" class="">
     <div class="container">
-        <div class="pt-16">
+        <div class="pt-24 max-md:pt-16 px-[5%]">
             <div class="w-full flex justify-center items-start flex-wrap">
-                <div class="w-4/5 grid grid-cols-2 grid-rows-1 max-md:grid-cols-1 max-md:grid-rows-2 gap-14 max-sm:gap-10">
+                <div class="w-full grid grid-cols-2 grid-rows-1 max-md:grid-cols-1 max-md:grid-rows-2 gap-14 max-sm:gap-10">
 
                     <div class="flex justify-center items-start flex-wrap">
                     
@@ -321,14 +299,14 @@
                             <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
                                 <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">HTML</p>
                     
-                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">  
+                                <div class="aspect-square max-h-[24px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">  
                                     <img src="assets\gfx\logo\HTML logo.png" alt="HTML" class="w-full h-full">
                                 </div>
                             </div>
                             <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
                                 <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">CSS</p>
                             
-                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
+                                <div class="aspect-square max-h-[24px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
                                     
                                     <img src="assets\gfx\logo\CSS logo.png" alt="HTML" class="w-full h-full">
                                 </div>
@@ -336,7 +314,7 @@
                             <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
                                 <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">JavaScript</p>
                                 
-                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
+                                <div class="aspect-square max-h-[24px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
                                     
                                     <img src="assets\gfx\logo\JavaScript logo.png" alt="HTML" class="w-full h-full">
                                 </div>
@@ -353,7 +331,7 @@
                             <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
                                 <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">React.js</p>
                                 
-                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
+                                <div class="aspect-square max-h-[24px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
                                     
                                     <img src="assets\gfx\logo\React logo.png" alt="HTML" class="w-full h-full">
                                 </div>
@@ -365,96 +343,16 @@
 
                     <div class="relative flex justify-center items-center flex-wrap">
                         <div class="flex flex-col absolute top-0">
-                            <h2 class="text-xl text-center font-semibold text-primary dark:text-dark-el mb-6">Others</h2>
-
-                            <div class="w-full flex justify-center items-center mb-8">
-
-                                <div class="w-full flex justify-center items-center flex-wrap flex-col">
-                                    
-                                    <div class="grid grid-cols-6 gap-2">
-                                        
-                                            <div class="flex relative flex-col">
-                                                <h2 class="absolute -top-6 font-semibold text-sm text-neutral-500 dark:text-dark-el self-start mb-2">Specialist</h2>
-                                                <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                    <div class="w-full h-full">
-                                                        <img src="assets\gfx\icons\apk\Figma.png" alt="Figma" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Adobe Photoshop.png" alt="Adobe Photoshop" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Adobe Illustrator.png" alt="Adobe Illustrator" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Adobe After Effects.png" alt="Adobe After Effects" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Blender.png" alt="Blender" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\canva.png" alt="Canva" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-
-                                        </div>
-                    
-                                </div>
-                            </div>
-                            
-                            <div class="w-full flex justify-center items-center mb-8">
-
-                                <div class="w-full flex justify-center items-center flex-wrap flex-col">
-                                    
-                                    <div class="grid grid-cols-6 gap-2">
-                                        
-                                            <div class="flex relative flex-col">
-                                                <h2 class="absolute -top-6 font-semibold text-sm text-neutral-500 dark:text-dark-el self-start mb-2">Generalist</h2>
-                                                <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                    <div class="w-full h-full">
-                                                        <img src="assets\gfx\icons\apk\Figma.png" alt="Figma" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Adobe Photoshop.png" alt="Adobe Photoshop" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Adobe Illustrator.png" alt="Adobe Illustrator" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Adobe After Effects.png" alt="Adobe After Effects" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\Blender.png" alt="Blender" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
-                                                <div class="w-full h-full">
-                                                    <img src="assets\gfx\icons\apk\canva.png" alt="Canva" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
-                                                </div>
-                                            </div>
-
-                                        </div>
-                    
-                                </div>
+                            <h2 class="text-xl text-center font-semibold text-primary dark:text-dark-el mb-6">Tools</h2>
+                            <div class="flex flex-wrap justify-center even:font-semibold">
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-l border-l-primary mb-3">Adobe Photoshop</p>
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-l border-l-primary mb-3">Adobe Illustrator</p>
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-l border-l-primary mb-3">Figma</p>
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-l border-l-primary mb-3">GitHub</p>
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-l border-l-primary mb-3">Visual Studio Code</p>
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-l border-l-primary mb-3">Node.js</p>
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-l border-l-primary mb-3">TailwindCSS</p>
+                                <p class="text-sm text-center text-neutral-500 px-2 dark:border-dark-el-fade dark:text-dark-el border-x border-x-primary mb-3">Spotify (optional)</p>
                             </div>
                         </div>
 
@@ -467,7 +365,7 @@
 </section>
 
 
-<!-- ========!!!   CONTENT END HERE  !!! ==================== -->
+<!-- =========================!!!   CONTENT END HERE  !!! =========================================== -->
 
     <!-- BLACK OVERLAY -->
     <div id="darkOverlay" class="pointer-events-none fixed z-[9998] backdrop-blur-none opacity-[0%] top-0 left-0 right-0 min-w-[100vw] min-h-[100vh] bg-[#00000000] transition duration-300 ease-in-out"></div>
@@ -550,10 +448,36 @@
 
                 <li id="cursorBlurToggleOffUs" class="dark:invert-[100%]"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] min-w-[32px] min-h-[32px]"></li>
             </div>
+
+            <div id="notificationBox" class="absolute rounded-md top-0 w-[270px] max-md:w-[230px] h-[0px] overflow-x-hidden overflow-y-scroll bg-neutral-100 border-none dark:bg-dark-bg-up dark:border-neutral-700 shadow-md origin-bottom transition-all duration-300 ease-in-out">
+
+                <div class="w-full absolute top-0 left-0 right-0 border border-neutral-700 flex justify-between items-center px-3 py-2 bg-primary transform translate-y-0 text-white">
+                    <h3 class="text-base">Notifications</h3>
+                    <div id="exitChatBox" class="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="0 0 25.66 25.66"><defs><style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="1" y1="1" x2="24.66" y2="24.66"/><line class="cls-1" x1="1" y1="24.49" x2="24.35" y2="1.15"/></g></g></svg>
+                    </div>
+                </div>
+
+                <div class="mt-14 px-2 hidden max-md:block w-full">
+                    <div class="px-2 py-1 bg-neutral-200 dark:bg-neutral-700 rounded-md">
+                        <p class="text-sm text-neutral-900 dark:text-dark-el-fade"><span class="font-semibold">Note:</span> Halaman ini lebih dioptimasikan untuk tampilan PC. Fungsi spesial seperti special cursor mungkin tidak akan berfungsi di tampilan ponsel.</p>
+                    </div>
+                </div>
+                <div class="mt-6 px-2 w-full">
+                    <div class="px-2 pb-3 bg-transparent rounded-md">
+                        <p class="text-sm text-primary dark:text-dark-el-fade"><span class="font-medium block">Hi there!</span>Saya Amir, seorang siswa SMK yang sedang mempelajari web development. Saya membuat projek ini hanya dimaksudkan sebagai latihan yang menjadi salah satu aspek penting dalam belajar. Jika teman-teman semua memiliki pertanyaan, silahkan tanyakan di akun GitHub saya.</p>
+                    </div>
+                </div>
+            </div>
             
-                <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="notifications" class="flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
+                <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" class="relative flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
+                    <svg id="notifications" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
                 </li>
+
+                    <!-- <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" class="relative flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 41.47"><circle cx="20.74" cy="20.74" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,16.74a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,29.74a2,2,0,0,1-2.74.72,1.91,1.91,0,0,1-.72-.72" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/></svg>
+                    </li> -->
+
             </div>
 
 

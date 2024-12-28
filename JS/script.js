@@ -1,6 +1,29 @@
+const notificationBox = document.getElementById('notificationBox');
+const exitChatBox = document.getElementById('exitChatBox');
+const notifications = document.getElementById("notifications");
+const notificationNone = document.getElementById('notificationNone');
 
+function openChatBoxBottom(){
+    notificationBox.classList.remove("h-[0px]");
+    notificationBox.classList.add("h-[220px]");
+    notificationBox.classList.add("-top-60");
+    // notifications.classList.add("hidden");
+    // notificationNone.classList.remove("hidden");
+}
+function exitChatBoxBottom(){
+    notificationBox.classList.remove("h-[220px]");
+    notificationBox.classList.add("h-[0px]");
+    notificationBox.classList.remove("-top-60");
+    notificationBox.classList.add("top-0");
+}
 
+exitChatBox.addEventListener("click", () => {
+    exitChatBoxBottom()
+})
 
+notifications.addEventListener("click", () => {
+    openChatBoxBottom()
+})
 
 const featureIsAnExperimentalAlertBox = document.getElementById("featureIsAnExperimentalAlertBox");
 const featureIsAnExperimentalAlertContainer = document.getElementById("featureIsAnExperimentalAlertContainer");
@@ -86,7 +109,7 @@ exitMenuBox.addEventListener("click", function(){
 
 const navbarBox = document.getElementById("navbar");
 document.addEventListener("click", (e) => {
-    if (!menu.contains(e.target) && !menuItem.contains(e.target) && !navbarBox.contains(e.target) && !themeItems.contains(e.target)){
+    if (!menu.contains(e.target) && !menuItem.contains(e.target) && !navbarBox.contains(e.target) && !themeItems.contains(e.target) && !notifications.contains(e.target)){
         menuItem.classList.remove("h-[215px]");
         menuItem.classList.remove("py-4");
         exitMenu.classList.remove("top-0");
@@ -97,6 +120,7 @@ document.addEventListener("click", (e) => {
         themeItems.classList.add("py-0");
         singleArrowTopTheme.classList.add("hidden");
         singleArrowBottomTheme.classList.remove("hidden");
+        exitChatBoxBottom()
     }
 })
 
