@@ -1759,6 +1759,11 @@ video {
   background-color: rgb(31 31 31 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-neutral-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:fill-white:hover {
   fill: #fff;
 }
