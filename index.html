@@ -63,121 +63,7 @@
     </style>
 
 </head>
-<body id="body" class="bg-[#fcfcfc] dark:bg-dark-bg dark:selection:bg-neutral-800 dark:selection:text-neutral-300 selection:bg-neutral-800 selection:text-neutral-200 overflow-x-hidden">
-
-    <!-- BLACK OVERLAY -->
-    <div id="darkOverlay" class="pointer-events-none fixed z-[9998] backdrop-blur-none opacity-[0%] top-0 left-0 right-0 min-w-[100vw] min-h-[100vh] bg-[#00000000] transition duration-300 ease-in-out"></div>
-
-    <!-- GRID BACKGROUND -->
-    <div class="w-full pt-4 max-sm:pt-0 h-[540px overflow-hidden absolute select-none -z-[999]">
-        <img src="assets\img\grid-bg-transparent.png" alt="grid" class="dark:opacity-[18%] opacity-[25%] max-sm:opacity-[20%] min-h-[600px] max-sm:min-w-[600px] bg-center">
-    </div>
-    
-    <!-- CURSOR -->
-
-    <div id="round" class="absolute w-[84px] h-[84px] max-md:hidden bg-[#ffffff04] border-[0.8px] border-[#ffffff25] backdrop-brightness-[99%] backdrop-blur-sm rounded-full -translate-x-7 shadow-lg -translate-y-6 pointer-events-none overflow-hidden z-[20]">
-        <div class="w-1/2 h-full bg-[#00000070] relative -right-24 blur-3xl"></div>
-        <div class="w-1/2 h-full bg-[#ffffff] relative right-14 blur-3xl"></div>
-    </div>
-
-    <div id="dotOutline" class="absolute origin-center flex justify-center items-end w-[184px] scale-[0] h-[184px] max-md:hidden bg-transparent opacity-[0%] rounded-full border-[1.4px] border-primary dark:border-[#ffffffaf] -translate-x-12 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition-all duration-500 ease-in-out">
-        <h2 class="relative bottom-8 font-bold text-lg text-primary dark:text-dark-el">Click to Hide</h2>
-        <!-- <div class="w-1/2 h-full bg-[#00000070] relative -right-24 blur-3xl">Click to Hide.</div>
-        <div class="w-1/2 h-full bg-[#ffffff] relative right-14 blur-3xl"></div> -->
-    </div>
-
-    <div id="letMiTingCursor" class="absolute origin-center scale-[0] w-[130px] h-[130px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
-        <img src="assets\img\let mi ting.JPG" alt="sigma">
-    </div>
-    
-    <div id="gojoSitoru" class="absolute origin-center scale-[0] w-[130px] h-[130px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
-        <img src="assets\img\meme\domain expansion.jpg" alt="sigma">
-    </div>
-
-    <div id="gacorKangCursor" class="absolute origin-center scale-[0] w-[130px] h-[130px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
-        <img src="assets\img\gacor-kang.jpg" alt="sigma">
-    </div>
-
-    <div id="lumayanSenang" class="absolute origin-center scale-[0] w-[130px] h-[130px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
-        <img src="assets\img\lumayan-senang-meme.jpg" alt="sigma">
-    </div>
-
-    <div id="siapaSangka" class="absolute origin-center scale-[0] w-[130px] h-[130px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
-        <img src="assets\img\meme\siapa sangka.JPG" alt="sigma">
-    </div>
-
-    <div id="amimir" class="absolute origin-center scale-[0] dark:invert-[100%] w-[130px] h-[130px] max-md:hidden bg-[#ffffff04] -translate-x-7 grayscale translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
-        <img src="assets\gfx\logo\Layer 4Logo Lebih Miring PNG.png" alt="sigma" class="">
-    </div>
-
-    <div id="roundBlur" class="hidden absolute max-md:hidden w-[424px] h-[424px] bg-transparent backdrop-blur-sm rounded-full -translate-x-32 shadow-lg -translate-y-6 opacity-90 animate-pulse blur-2xl pointer-events-none overflow-hidden -z-[25]">
-        <div class="w-1/2 h-1/2 bg-red-500 blur-3xl opacity-70"></div>
-        <div class="w-1/2 h-1/2 float-right bg-blue-500 blur-3xl  opacity-50"></div>
-        <div class="w-1/2 h-1/2 float-right bg-indigo-500 blur-3xl opacity-100"></div>
-    </div>
-
-    <!-- BOTTOM  BAR -->
-
-    <div class="md:hidden fixed bottom-0 w-full h-[90px] bg-gradient-to-t from-white to-transparent z-[900] dark:from-dark-bg"></div>
-
-    <ul class="relative flex justify-end z-[999]">
-            <div class="fixed flex justify-end gap-2 right-8 max-md:right-4 max-sm:right-2 bottom-4 ">
-
-            <div id="bottomSupported" class="flex justify-end gap-2">
-                <li id="cursorDefaultToggleOff" class="max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
-
-                <li id="cursorDefaultToggleOn" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
-
-                <li id="cursorGlassToggleOff" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><circle cx="11.55" cy="10.21" r="5.11" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="10.56 20.53 10.55 8.65 19.54 16.57 14.44 17.25 10.56 20.53"/></svg></li>
-
-                <li id="cursorGlassToggleOn" class="max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
-
-                <li id="cursorBlurToggleOff" class="max-md:hidden"><img  src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
-
-                <li id="cursorBlurToggleOn" class="hidden max-md:hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
-            </div>
-
-            <div id="bottomUnsupported" class="flex justify-end items-center md:hidden grayscale-[100%] gap-2">
-
-                <li id="unsupportedInfo" class="scale-[1] transition-all duration-200 ease-in-out origin-right">
-                    <div class="w-[154px] h-[48px] rounded-xl border-[1px] border-[#ffffff25] flex items-center bg-primary overflow-hidden px-2 py-1"><h3 class="text-white font-light text-xs">Fitur ini hanya berfungsi di versi desktop.</h3>
-                </li>
-
-                <li id="exitUnsupportedInfo" class="dark:invert-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 25.66 25.66"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="1" y1="1" x2="24.66" y2="24.66"/><line class="cls-1" x1="1" y1="24.49" x2="24.35" y2="1.15"/></g></g></svg></li>
-
-                <li id="cursorDefaultToggleOffUs" class="dark:invert-[100%]"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
-
-                <li id="cursorGlassToggleOnUs" class="dark:invert-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
-
-                <li id="cursorBlurToggleOffUs" class="dark:invert-[100%]"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] min-w-[32px] min-h-[32px]"></li>
-            </div>
-            
-
-                <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="notifications" class="flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
-                </li>
-            </div>
-    </ul>
-
-    <!-- NOTIFICATION / ALERT -->
-
-    <div id="featureIsAnExperimentalAlertContainer" class="fixed z-[9999] w-full -translate-y-32 flex justify-center transition duration-300 ease-in-out">
-        <div id="featureIsAnExperimentalAlertBox" class="w-[500px] max-sm:w-[340px] relative h-[90px] flex justify-between items-center bg-red-500 rounded-xl border-[4px] gap-4 px-3 py-2 border-red-400 overflow-hidden">
-
-            <div class="absolute top-4 transition duration-300 ease-in-out right-4">
-                <svg id="exitFeatureAlert" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 25.66 25.66"><line x1="1" y1="1" x2="24.66" y2="24.66" style="fill:none;stroke:#fecaca;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/><line x1="1" y1="24.49" x2="24.35" y2="1.15" style="fill:none;stroke:#fecaca;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/></svg>
-            </div>
-
-            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 114.36 102.51"><path d="M46.72,7,2.64,83.4a12.07,12.07,0,0,0,10.45,18.11h88.18A12.07,12.07,0,0,0,111.72,83.4L67.64,7A12.08,12.08,0,0,0,46.72,7Z" style="fill:none;stroke:#fecaca;stroke-miterlimit:10;stroke-width:2px"/><path d="M52.78,75.23a4.36,4.36,0,0,1,3.52-4,4.68,4.68,0,0,1,5.25,5.54,4.29,4.29,0,0,1-3.16,3.58C55,81.24,52.39,78.71,52.78,75.23Zm1.77-12.7-.87-30a3.51,3.51,0,0,1,3.51-3.61h0a3.51,3.51,0,0,1,3.51,3.61l-.88,30a2.64,2.64,0,0,1-2.63,2.56h0A2.64,2.64,0,0,1,54.55,62.53Z" style="fill:#fecaca"/></svg>
-
-            <div class="w-full">
-                <h3 class="font-bold text-red-200 text-xl">Fitur masih dalam pengembangan.</h3>
-                <p class="text-red-100 text-sm font-normal">Fitur ini akan tersedia beberapa saat lagi.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- NOTIFICATION / ALERT END -->
+<body id="body" class="bg-[#fafafa] dark:bg-dark-bg dark:selection:bg-neutral-800 dark:selection:text-neutral-300 selection:bg-neutral-800 selection:text-neutral-200 overflow-x-hidden">
 
     <!-- ================   NAVBAR START    ==================================== -->
 
@@ -212,7 +98,7 @@
                     </li>
 
                     <!-- Theme items -->
-                    <div id="themeItems" class="w-[130px] h-[0px] overflow-hidden flex justify-center items-center absolute top-11 px-3 py-0 dark:bg-dark-bg-up bg-[#ffffff95] max-sm:bg-[#fffffffa] shadow-md rounded-xl backdrop-blur-sm transition-all duration-300 ease-in-out">
+                    <div id="themeItems" class="w-[140px] h-[0px] overflow-hidden flex justify-center items-center absolute top-11 px-3 py-0 dark:bg-dark-bg-up bg-[#ffffff95] max-sm:bg-[#fffffffa] shadow-md rounded-xl backdrop-blur-sm transition-all duration-300 ease-in-out">
                         <ul class="flex flex-col gap-1">
                             <li id="lightToggle" style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" class="flex flex-row gap-1 px-2 py-1 rounded-md dark:text-dark-el hover:bg-primary hover:text-white">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
@@ -275,6 +161,11 @@
 
     <!-- ================   HOME SECTION    ==================================== -->
 <section id="home" class="relative">
+     <!-- GRID BACKGROUND -->
+     <div class="w-full pt-4 max-sm:pt-0 h-[540px overflow-hidden absolute select-none -z-[999]">
+        <img src="assets\img\grid-bg-transparent.png" alt="grid" class="dark:opacity-[18%] opacity-[25%] max-sm:opacity-[20%] min-h-[600px] max-sm:min-w-[600px] bg-center">
+    </div>
+
     <div class="w-full h-full absolute z-[10] flex justify-center items-center">
         <div id="landingParagraph" class="w-full z-[5] absolute h-[100%] bottom-0"></div>
         <div id="removeLogo" class="absolute z-[15] w-[50%] h-full"></div>
@@ -282,7 +173,6 @@
 
     <div class="pt-36">
 
-        
         <div class="w-full flex flex-wrap justify-center self-center px-[5%]">
             <div class="w-2/3 relative z-[10] max-md:w-full">
                 <h1 id="aboutHeadContent" class="pointer-events-none font-bold leading-snug text-center dark:text-dark-el text-primary text-5xl">Hi, my name is <span id="AmirHamzah" class="text-primary dark:text-dark-el">Amir Hamzah</span>. I'am a "Creative" <span class="">Front-End Designer</span>.</h1>
@@ -305,8 +195,9 @@
     
     <div class="container">
         
-        <div class="w-full pt-16 max-sm:pt-0 h-[540px] overflow-hidden absolute select-none -z-[999]">
-            <img src="assets\img\grid-bg-transparent.png" alt="grid" class="float-right dark:opacity-[18%] opacity-[20%] min-h-[600px] max-sm:min-w-[600px] bg-center">
+        <!-- GRID -->
+        <div class="w-full max-w-[100vw] pt-16 max-sm:pt-0 h-[540px] flex justify-end overflow-hidden absolute select-none -z-[999]">
+            <img src="assets\img\grid-bg-transparent.png" alt="grid" class="flex-shrink-0 dark:opacity-[18%] opacity-[20%] min-h-[600px] max-sm:min-w-[600px] bg-center">
         </div>
         
         <div class="pt-36 max-sm:pt-24 px-[5%]">
@@ -315,15 +206,19 @@
 
                     <div class="w-full flex justify-center self-start mb-14 max-sm:mb-6">
                         <div class="w-full flex justify-center max-sm:justify-between">
-                            <h3 id="aboutMeSection" class="text-2xl font-bold dark:text-dark-el">About Me</h3>
+                            <div class="block text-center">
+                                <h3 id="aboutMeSection" class="text-2xl font-bold dark:text-dark-el">About Me</h3>
+                                <!-- <p class="text-sm text-neutral-500">There is no motivation.</p> -->
+                            </div>
                         </div>
                     </div>
                     
                     <div class="w-[45%] max-h-[280px] max-sm:max-h-max transition duration-300 ease-in-out aspect-video max-sm:w-full max-md:mb-10 max-sm:mb-8 flex-shrink-0 overflow-hidden rounded-lg">
                         <img id="myPhoto" src="assets\img\Me.JPG" alt="Me" class="relative grayscale hover:scale-[1.3] hover:grayscale-0 bg-cover min-w-[200px] max-lg:min-w-[460px] max-sm:min-w-full transition duration-300 ease-in-out">
                     </div>
+
                 <div id="genericOverviewAbout" class="w-[45%] max-sm:w-full max-sm:mb-10 flex-shrink-0">
-                    <h3 class="text-2xl font-bold dark:text-dark-el mb-3">Generic Overview</h3>
+                    <h3 class="text-2xl font-bold dark:text-dark-el mb-3">Who Am I?</h3>
                     <p class="text-base text-neutral-500">Seorang pelajar Sekolah Menengah Kejuruan (SMK) yang mengambil jurusan Teknik Komputer dan Jaringan. Memiliki hobi di bidang olahraga badminton dan bidang IT termasuk programming. Memiliki pengalaman di bidang <span class="underline">web development</span> selama 4+ bulan lebih di bagian front-end design.</p>
                 </div>
                 </div>
@@ -343,7 +238,7 @@
                 </div>
             </div>
 
-            <div class="w-full flex justify-center self-center flex-wrap">
+            <!-- <div class="w-full flex justify-center self-center flex-wrap">
                 <div class="w-[90%] max-md:w-[100%] max-sm:w-[95%] flex justify-between self-center flex-wrap mb-20 max-md:mb-10 max-sm:mb-8">
                     
                     <div class="w-[45%] max-h-[280px] max-sm:max-h-full transition duration-300 ease-in-out aspect-video max-sm:w-full max-md:mb-10 max-sm:mb-8 flex-shrink-0 overflow-hidden rounded-lg">
@@ -369,11 +264,321 @@
                     <p class="text-base text-neutral-500">Kegiatan ini merupakan kegiatan literasi digital yang membahas tentang bagaimana cara kerja suatu website hingga microsite.</p>
                 </div>
                 </div>
-            </div>
+            </div> -->
 
         </div>
     </div>
 </section>
+
+<section id="skills" class="">
+    <div class="container">
+        <div class="w-full flex justify-center flex-wrap self-center gap-y-10">
+
+            <div class="w-full flex justify-start items-center flex-col gap-2">
+                <h2 class="text-2xl text-primary font-semibold dark:text-dark-el">Skills & Expertise</h2>
+                <p class="text-lg text-neutral-500 dark:text-dark-el-fade">I'am still learning even I got in a work time.</p>
+            </div>
+
+            <div class="w-3/4 grid grid-cols-4 grid-rows-1 max-md:grid-cols-2 max-md:grid-rows-2 max-sm:grid-cols-2 max-sm:grid-rows-2 gap-3">
+                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
+                    <img src="assets\gfx\ui\code.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
+
+                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">Web Development</h3>
+                </div>
+                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
+                    <img src="assets\gfx\ui\layout.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
+
+                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">UI/UX Design</h3>
+                </div>
+                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
+                    <img src="assets\gfx\ui\pen-tool.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
+
+                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">Graphic Design</h3>
+                </div>
+                <div class="flex justify-start items-center flex-col bg-transparent px-2 py-3 rounded-xl border border-transparent hover:border-neutral-300 dark:hover:border-neutral-700 hover:scale-[1.080] dark:hover:bg-dark-bg-up hover:bg-neutral-200 transition duration-200 ease-in-out">
+                    <img src="assets\gfx\ui\user.svg" width="36px" height="36px" alt="ui" class="mb-2 dark:invert">
+
+                    <h3 class="text-sm font-semibold text-primary text-center dark:text-dark-el">Illustration</h3>
+                </div>
+            </div>
+        </div>
+</section>
+
+<section id="techStack" class="">
+    <div class="container">
+        <div class="pt-16">
+            <div class="w-full flex justify-center items-start flex-wrap">
+                <div class="w-4/5 grid grid-cols-2 grid-rows-1 max-md:grid-cols-1 max-md:grid-rows-2 gap-14 max-sm:gap-10">
+
+                    <div class="flex justify-center items-start flex-wrap">
+                    
+                        <div class="w-full">
+                            <h2 class="text-xl text-center font-semibold text-primary dark:text-dark-el mb-3">Tech Stack</h2>
+                        </div>
+                        
+                        <div class="w-full flex flex-wrap justify-center items-start content-center gap-x-5">
+                            
+                            <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
+                                <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">HTML</p>
+                    
+                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">  
+                                    <img src="assets\gfx\logo\HTML logo.png" alt="HTML" class="w-full h-full">
+                                </div>
+                            </div>
+                            <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
+                                <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">CSS</p>
+                            
+                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
+                                    
+                                    <img src="assets\gfx\logo\CSS logo.png" alt="HTML" class="w-full h-full">
+                                </div>
+                            </div>
+                            <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
+                                <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">JavaScript</p>
+                                
+                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
+                                    
+                                    <img src="assets\gfx\logo\JavaScript logo.png" alt="HTML" class="w-full h-full">
+                                </div>
+                            </div>
+                            <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
+                                <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">Tailwind</p>
+                                
+                                <div class="aspect-video max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
+                                    
+                                    <img src="assets\gfx\logo\TailwindCSS logo.png" alt="HTML" class="w-full h-full">
+                                </div>
+                            </div>
+                        
+                            <div class="w-auto h-[60px] flex flex-shrink-0 justify-start items-center flex-col gap-2">
+                                <p class="text-center text-sm font-medium text-neutral-500 dark:text-dark-el-fade">React.js</p>
+                                
+                                <div class="aspect-square max-h-[22px] md:max-h-[26px] grayscale hover:grayscale-0 transition duration-300 ease-out">
+                                    
+                                    <img src="assets\gfx\logo\React logo.png" alt="HTML" class="w-full h-full">
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                    </div>
+
+                    <div class="relative flex justify-center items-center flex-wrap">
+                        <div class="flex flex-col absolute top-0">
+                            <h2 class="text-xl text-center font-semibold text-primary dark:text-dark-el mb-6">Others</h2>
+
+                            <div class="w-full flex justify-center items-center mb-8">
+
+                                <div class="w-full flex justify-center items-center flex-wrap flex-col">
+                                    
+                                    <div class="grid grid-cols-6 gap-2">
+                                        
+                                            <div class="flex relative flex-col">
+                                                <h2 class="absolute -top-6 font-semibold text-sm text-neutral-500 dark:text-dark-el self-start mb-2">Specialist</h2>
+                                                <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                    <div class="w-full h-full">
+                                                        <img src="assets\gfx\icons\apk\Figma.png" alt="Figma" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Adobe Photoshop.png" alt="Adobe Photoshop" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Adobe Illustrator.png" alt="Adobe Illustrator" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Adobe After Effects.png" alt="Adobe After Effects" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Blender.png" alt="Blender" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\canva.png" alt="Canva" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                    
+                                </div>
+                            </div>
+                            
+                            <div class="w-full flex justify-center items-center mb-8">
+
+                                <div class="w-full flex justify-center items-center flex-wrap flex-col">
+                                    
+                                    <div class="grid grid-cols-6 gap-2">
+                                        
+                                            <div class="flex relative flex-col">
+                                                <h2 class="absolute -top-6 font-semibold text-sm text-neutral-500 dark:text-dark-el self-start mb-2">Generalist</h2>
+                                                <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                    <div class="w-full h-full">
+                                                        <img src="assets\gfx\icons\apk\Figma.png" alt="Figma" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Adobe Photoshop.png" alt="Adobe Photoshop" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Adobe Illustrator.png" alt="Adobe Illustrator" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Adobe After Effects.png" alt="Adobe After Effects" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\Blender.png" alt="Blender" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+                                            <div class="max-w-[28px] max-h-[28px] overflow-hidden  aspect-square flex justify-center items-center">
+                                                <div class="w-full h-full">
+                                                    <img src="assets\gfx\icons\apk\canva.png" alt="Canva" class="bg-center grayscale hover:grayscale-0 transition duration-300 ease-in-out">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ========!!!   CONTENT END HERE  !!! ==================== -->
+
+    <!-- BLACK OVERLAY -->
+    <div id="darkOverlay" class="pointer-events-none fixed z-[9998] backdrop-blur-none opacity-[0%] top-0 left-0 right-0 min-w-[100vw] min-h-[100vh] bg-[#00000000] transition duration-300 ease-in-out"></div>
+    
+    <!-- CURSOR -->
+
+    <div id="round" class="absolute w-[84px] h-[84px] max-md:hidden bg-[#ffffff04] border-[0.8px] border-[#ffffff25] backdrop-brightness-[99%] backdrop-blur-sm rounded-full -translate-x-7 shadow-lg -translate-y-6 pointer-events-none overflow-hidden z-[20]">
+        <div class="w-1/2 h-full bg-[#00000070] relative -right-24 blur-3xl"></div>
+        <div class="w-1/2 h-full bg-[#ffffff] relative right-14 blur-3xl"></div>
+    </div>
+
+    <div id="dotOutline" class="absolute origin-center flex justify-center items-end w-[184px] scale-[0] h-[184px] max-md:hidden bg-transparent opacity-[0%] rounded-full border-[1.4px] border-primary dark:border-[#ffffffaf] -translate-x-12 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition-all duration-500 ease-in-out">
+        <h2 class="relative bottom-8 font-bold text-lg text-primary dark:text-dark-el">Click to Hide</h2>
+        <!-- <div class="w-1/2 h-full bg-[#00000070] relative -right-24 blur-3xl">Click to Hide.</div>
+        <div class="w-1/2 h-full bg-[#ffffff] relative right-14 blur-3xl"></div> -->
+    </div>
+
+    <div id="letMiTingCursor" class="absolute origin-center scale-[0] w-[140px] h-[140px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
+        <img src="assets\img\let mi ting.JPG" alt="sigma">
+    </div>
+    
+    <div id="gojoSitoru" class="absolute origin-center scale-[0] w-[140px] h-[140px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
+        <img src="assets\img\meme\domain expansion.jpg" alt="sigma">
+    </div>
+
+    <div id="gacorKangCursor" class="absolute origin-center scale-[0] w-[140px] h-[140px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
+        <img src="assets\img\gacor-kang.jpg" alt="sigma">
+    </div>
+
+    <div id="lumayanSenang" class="absolute origin-center scale-[0] w-[140px] h-[140px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
+        <img src="assets\img\lumayan-senang-meme.jpg" alt="sigma">
+    </div>
+
+    <div id="siapaSangka" class="absolute origin-center scale-[0] w-[140px] h-[140px] max-md:hidden bg-[#ffffff04] -translate-x-7 -translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
+        <img src="assets\img\meme\siapa sangka.JPG" alt="sigma">
+    </div>
+
+    <div id="amimir" class="absolute origin-center scale-[0] dark:invert-[100%] w-[140px] h-[140px] max-md:hidden bg-[#ffffff04] -translate-x-7 grayscale translate-y-6 pointer-events-none overflow-hidden z-[25] transition duration-500 ease-in-out">
+        <img src="assets\gfx\logo\Layer 4Logo Lebih Miring PNG.png" alt="sigma" class="">
+    </div>
+
+    <div id="roundBlur" class="hidden absolute max-md:hidden w-[424px] h-[424px] bg-transparent backdrop-blur-sm rounded-full -translate-x-32 shadow-lg -translate-y-6 opacity-90 animate-pulse blur-2xl pointer-events-none overflow-hidden -z-[25]">
+        <div class="w-1/2 h-1/2 bg-red-500 blur-3xl opacity-70"></div>
+        <div class="w-1/2 h-1/2 float-right bg-blue-500 blur-3xl  opacity-50"></div>
+        <div class="w-1/2 h-1/2 float-right bg-indigo-500 blur-3xl opacity-100"></div>
+    </div>
+
+    <!-- BOTTOM  BAR -->
+
+    <div class="md:hidden fixed bottom-0 w-full h-[90px] pointer-events-none bg-gradient-to-t from-white to-transparent z-[900] dark:from-dark-bg"></div>
+
+    <ul class="relative flex justify-end z-[999]">
+            <div class="fixed flex justify-end gap-2 right-8 max-md:right-4 max-sm:right-2 bottom-4 ">
+
+            <div id="bottomSupported" class="flex justify-end gap-2">
+                <li id="cursorDefaultToggleOff" class="max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
+
+                <li id="cursorDefaultToggleOn" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
+
+                <li id="cursorGlassToggleOff" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><circle cx="11.55" cy="10.21" r="5.11" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="10.56 20.53 10.55 8.65 19.54 16.57 14.44 17.25 10.56 20.53"/></svg></li>
+
+                <li id="cursorGlassToggleOn" class="max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
+
+                <li id="cursorBlurToggleOff" class="max-md:hidden"><img  src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
+
+                <li id="cursorBlurToggleOn" class="hidden max-md:hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
+            </div>
+
+            <div id="bottomUnsupported" class="flex justify-end items-center md:hidden grayscale-[100%] gap-2">
+
+                <li id="unsupportedInfo" class="scale-[1] transition-all duration-200 ease-in-out origin-right">
+                    <div class="w-[154px] h-[48px] rounded-xl border-[1px] border-[#ffffff25] flex items-center bg-primary overflow-hidden px-2 py-1"><h3 class="text-white font-light text-xs">Fitur ini hanya berfungsi di versi desktop.</h3>
+                </li>
+
+                <li id="exitUnsupportedInfo" class="dark:invert-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 25.66 25.66"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="1" y1="1" x2="24.66" y2="24.66"/><line class="cls-1" x1="1" y1="24.49" x2="24.35" y2="1.15"/></g></g></svg></li>
+
+                <li id="cursorDefaultToggleOffUs" class="dark:invert-[100%]"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
+
+                <li id="cursorGlassToggleOnUs" class="dark:invert-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
+
+                <li id="cursorBlurToggleOffUs" class="dark:invert-[100%]"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] min-w-[32px] min-h-[32px]"></li>
+            </div>
+            
+                <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" id="notifications" class="flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
+                </li>
+            </div>
+
+
+    </ul>
+
+    <!-- NOTIFICATION / ALERT -->
+
+    <div id="featureIsAnExperimentalAlertContainer" class="fixed z-[9999] w-full -translate-y-32 flex justify-center transition duration-300 ease-in-out">
+        <div id="featureIsAnExperimentalAlertBox" class="w-[500px] max-sm:w-[340px] relative h-[90px] flex justify-between items-center bg-red-500 rounded-xl border-[4px] gap-4 px-3 py-2 border-red-400 overflow-hidden">
+
+            <div class="absolute top-4 transition duration-300 ease-in-out right-4">
+                <svg id="exitFeatureAlert" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 25.66 25.66"><line x1="1" y1="1" x2="24.66" y2="24.66" style="fill:none;stroke:#fecaca;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/><line x1="1" y1="24.49" x2="24.35" y2="1.15" style="fill:none;stroke:#fecaca;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px"/></svg>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 114.36 102.51"><path d="M46.72,7,2.64,83.4a12.07,12.07,0,0,0,10.45,18.11h88.18A12.07,12.07,0,0,0,111.72,83.4L67.64,7A12.08,12.08,0,0,0,46.72,7Z" style="fill:none;stroke:#fecaca;stroke-miterlimit:10;stroke-width:2px"/><path d="M52.78,75.23a4.36,4.36,0,0,1,3.52-4,4.68,4.68,0,0,1,5.25,5.54,4.29,4.29,0,0,1-3.16,3.58C55,81.24,52.39,78.71,52.78,75.23Zm1.77-12.7-.87-30a3.51,3.51,0,0,1,3.51-3.61h0a3.51,3.51,0,0,1,3.51,3.61l-.88,30a2.64,2.64,0,0,1-2.63,2.56h0A2.64,2.64,0,0,1,54.55,62.53Z" style="fill:#fecaca"/></svg>
+
+            <div class="w-full">
+                <h3 class="font-bold text-red-200 text-xl">Fitur masih dalam pengembangan.</h3>
+                <p class="text-red-100 text-sm font-normal">Fitur ini akan tersedia beberapa saat lagi.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- NOTIFICATION / ALERT END -->
+    
 
     <script src="./JS/script.js"></script>
 </body>

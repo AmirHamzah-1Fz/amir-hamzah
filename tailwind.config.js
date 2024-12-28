@@ -14,7 +14,7 @@ module.exports = {
         'solid': '#1e293b',
 
         'dark-bg': '#1f1f1f',
-        'dark-bg-up': '#2f2f2f',
+        'dark-bg-up': '#2a2a2a',
         'dark-el': '#fcfcfc',
         'dark-el-fade': '#d4d4d4',
       },

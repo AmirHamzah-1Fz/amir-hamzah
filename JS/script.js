@@ -1,3 +1,7 @@
+
+
+
+
 const featureIsAnExperimentalAlertBox = document.getElementById("featureIsAnExperimentalAlertBox");
 const featureIsAnExperimentalAlertContainer = document.getElementById("featureIsAnExperimentalAlertContainer");
 const darkOverlay = document.getElementById("darkOverlay");
@@ -133,11 +137,6 @@ darkToggle.addEventListener("click", () => {
     singleArrowBottomTheme.classList.toggle("hidden");
     singleArrowTopTheme.classList.toggle("hidden");
     html.classList.add('dark');
-    // document.body.classList.add("dark:bg-dark-bg")
-    // showAlert()
-    // exitAlert()
-    // showBlackOverlay()
-    // exitBlackOverlay()
 })
 
 lightToggle.addEventListener("click", () => {
@@ -150,8 +149,6 @@ lightToggle.addEventListener("click", () => {
     singleArrowBottomTheme.classList.toggle("hidden");
     singleArrowTopTheme.classList.toggle("hidden");
     html.classList.remove('dark');
-    // document.body.classList.remove("dark:bg-dark-bg")
-    // document.body.classList.remove("dark:bg-dark-bg");
 })
 
 window.addEventListener("scroll", () => {
@@ -408,25 +405,7 @@ removeLogo.addEventListener("mouseover", () => {
     hideCursorOutlineDot()
 })
 
-const aboutMeSection = document.getElementById("aboutMeSection");
-
-// aboutMeSection.addEventListener("mouseover", function() {
-//     gojoSitoru.classList.remove("scale-[0]");
-//     gojoSitoru.classList.add("scale-[1]");
-// })
-
-// aboutMeSection.addEventListener("mouseleave", function() {
-//     gojoSitoru.classList.remove("scale-[1]");
-//     gojoSitoru.classList.add("scale-[0]");
-// })
-
-// aboutMeSection.addEventListener("click", () => {
-//     gojoSitoru.classList.remove("scale-[1]");
-//     gojoSitoru.classList.add("scale-[0]");
-// })
-
 // CURSOR COLLECTION
-const gojoSitoru = document.getElementById("gojoSitoru");
 const dotOutline = document.getElementById("dotOutline");
 const amimir = document.getElementById("amimir");
 const siapaSangka = document.getElementById("siapaSangka");
