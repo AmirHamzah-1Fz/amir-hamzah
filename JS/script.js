@@ -109,7 +109,7 @@ exitMenuBox.addEventListener("click", function(){
 
 const navbarBox = document.getElementById("navbar");
 document.addEventListener("click", (e) => {
-    if (!menu.contains(e.target) && !menuItem.contains(e.target) && !navbarBox.contains(e.target) && !themeItems.contains(e.target) && !notifications.contains(e.target)){
+    if (!menu.contains(e.target) && !menuItem.contains(e.target) && !navbarBox.contains(e.target) && !themeItems.contains(e.target) && !notifications.contains(e.target) && !notificationBox.contains(e.target)){
         menuItem.classList.remove("h-[215px]");
         menuItem.classList.remove("py-4");
         exitMenu.classList.remove("top-0");

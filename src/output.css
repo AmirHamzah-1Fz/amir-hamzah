@@ -2843,6 +2843,10 @@ video {
     margin-bottom: 1.25rem;
   }
 
+  .max-sm\:mt-6 {
+    margin-top: 1.5rem;
+  }
+
   .max-sm\:max-h-full {
     max-height: 100%;
   }
