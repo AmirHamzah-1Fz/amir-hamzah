@@ -6,6 +6,7 @@ const notificationNone = document.getElementById('notificationNone');
 function openChatBoxBottom(){
     notificationBox.classList.remove("h-[0px]");
     notificationBox.classList.add("h-[220px]");
+    notificationBox.classList.remove("top-0");
     notificationBox.classList.add("-top-60");
     // notifications.classList.add("hidden");
     // notificationNone.classList.remove("hidden");
