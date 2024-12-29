@@ -1,3 +1,7 @@
 {
-    "livePreview.defaultPreviewPath": "/index.html"
+  "livePreview.defaultPreviewPath": "/index.html",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.tailwindConfig": "./tailwind.config.js",
+  "prettier.plugins": ["prettier-plugin-tailwindcss"]
 }
