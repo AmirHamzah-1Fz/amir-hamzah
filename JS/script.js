@@ -125,7 +125,7 @@ exitMenuBox.addEventListener("click", function(){
 
 const navbarBox = document.getElementById("navbar");
 document.addEventListener("click", (e) => {
-    if (!menu.contains(e.target) && !menuItem.contains(e.target) && !navbarBox.contains(e.target) && !themeItems.contains(e.target) && !notifications.contains(e.target) && !notificationBox.contains(e.target)){
+    if (!menu.contains(e.target) && !menuItem.contains(e.target) && !navbarBox.contains(e.target) && !themeItems.contains(e.target) && !notifications.contains(e.target) && !notificationBox.contains(e.target) && !cursorDefaultUs.contains(e.target) && !cursorGlassUs.contains(e.target) && !cursorBlurUs.contains(e.target)){
         menuItem.classList.remove("h-[215px]");
         menuItem.classList.remove("py-4");
         exitMenu.classList.remove("top-0");
@@ -137,6 +137,9 @@ document.addEventListener("click", (e) => {
         singleArrowTopTheme.classList.add("hidden");
         singleArrowBottomTheme.classList.remove("hidden");
         exitChatBoxBottom()
+        closeMessageSatu()
+        closeMessageDua()
+        closeMessageTiga()
     }
 })
 
@@ -198,6 +201,9 @@ window.addEventListener("scroll", () => {
     themeItems.classList.add("h-[0px]");
     themeItems.classList.add("py-0");
     exitChatBoxBottom()
+    closeMessageSatu()
+    closeMessageDua()
+    closeMessageTiga()
 })
 
 // CURSOR
