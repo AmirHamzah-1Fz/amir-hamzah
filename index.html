@@ -75,7 +75,7 @@
 
     <!-- ================   NAVBAR START    ==================================== -->
      
-    <div id="navbar" class="w-full fixed top-0 left-0 right-0 bg-transparent border-b-[1.3px] border-[#fcfcfc30] backdrop-blur-sm z-[999]">
+    <div id="navbar" class="w-full fixed top-0 left-0 right-0 bg-[#f9f9f909] dark:bg-transparent max-md:bg-[#f9f9f9be] border-b-[1.3px] border-[#fcfcfc30] backdrop-blur-sm max-md:backdrop-blur-md z-[999]">
         <nav class="w-full flex justify-center items-center px-[7%] py-3">
 
             <div class="w-full flex justify-between items-center gap-6">
@@ -564,32 +564,27 @@
 
     <!-- BOTTOM  BAR -->
 
-    <div class="md:hidden fixed bottom-0 w-full h-[90px] pointer-events-none bg-gradient-to-t from-white to-transparent z-[900] dark:from-dark-bg"></div>
+    <div class="md:hidden fixed bottom-0 w-full h-[75px] blur-md pointer-events-none bg-gradient-to-t from-white from-0% to-transparent to-100% z-[900] dark:from-dark-bg"></div>
 
-    <ul class="relative flex justify-end z-[999]">
-            <div class="fixed flex justify-end gap-2 right-8 max-md:right-4 max-sm:right-2 bottom-4 ">
+    <ul class="relative flex justify-end items-center z-[999]">
+            <div class="fixed flex justify-end items-center gap-2 right-8 max-md:right-4 max-sm:right-2 bottom-4 ">
 
-            <div id="bottomSupported" class="flex justify-end gap-2">
-                <li id="cursorDefaultToggleOff" class="max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
+            <div id="cursorButton" class="relative -bottom-0 transition-all duration-[500ms] ease-in-out">
+                <div id="bottomSupported" class="flex justify-end gap-2">
+                    <li id="cursorDefaultToggleOff" class="max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
 
-                <li id="cursorDefaultToggleOn" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
+                    <li id="cursorDefaultToggleOn" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><polygon points="9.04 18.57 9.04 6.69 18.02 14.61 12.92 15.29 9.04 18.57" style="fill:#fff"/></svg></li>
 
-                <li id="cursorGlassToggleOff" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><circle cx="11.55" cy="10.21" r="5.11" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="10.56 20.53 10.55 8.65 19.54 16.57 14.44 17.25 10.56 20.53"/></svg></li>
+                    <li id="cursorGlassToggleOff" class="hidden max-md:hidden"><svg class="dark:invert-[100%]" width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><circle cx="11.55" cy="10.21" r="5.11" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="10.56 20.53 10.55 8.65 19.54 16.57 14.44 17.25 10.56 20.53"/></svg></li>
 
-                <li id="cursorGlassToggleOn" class="max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
+                    <li id="cursorGlassToggleOn" class="max-md:hidden"><svg class="dark:invert-[100%]" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/><circle cx="11.05" cy="9.71" r="5.11" style="fill:none;stroke:#fff;stroke-miterlimit:10"/><polygon points="10.06 20.03 10.05 8.15 19.04 16.07 13.94 16.75 10.06 20.03" style="fill:#fff"/></svg></li>
 
-                <li id="cursorBlurToggleOff" class="max-md:hidden"><img  src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
+                    <li id="cursorBlurToggleOff" class="max-md:hidden"><img  src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
 
-                <li id="cursorBlurToggleOn" class="hidden max-md:hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
+                    <li id="cursorBlurToggleOn" class="hidden max-md:hidden"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur.png" alt="blur" class="w-[32px] h-[32px] dark:invert-[100%]"></li>
             </div>
 
             <div id="bottomUnsupported" class="flex justify-end items-center md:hidden grayscale-[100%] gap-2">
-
-                <li id="unsupportedInfo" class="scale-[1] transition-all duration-200 ease-in-out origin-right">
-                    <div class="w-[154px] h-[48px] rounded-xl border-[1px] border-[#ffffff25] flex items-center bg-primary overflow-hidden px-2 py-1"><h3 class="text-white font-light text-xs">Fitur ini hanya berfungsi di versi desktop.</h3>
-                </li>
-
-                <li id="exitUnsupportedInfo" class="dark:invert-[100%]"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 25.66 25.66"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2px;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><line class="cls-1" x1="1" y1="1" x2="24.66" y2="24.66"/><line class="cls-1" x1="1" y1="24.49" x2="24.35" y2="1.15"/></g></g></svg></li>
 
                 <li id="cursorDefaultToggleOffUs" class="dark:invert-[100%]"><svg width="32" height="32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25"><circle cx="12.5" cy="12.5" r="12" style="fill:none;stroke:#000;stroke-miterlimit:10"/><polygon points="9.54 19.07 9.54 7.19 18.52 15.11 13.42 15.79 9.54 19.07"/></svg></li>
 
@@ -597,8 +592,9 @@
 
                 <li id="cursorBlurToggleOffUs" class="dark:invert-[100%]"><img src="assets\gfx\icons\Cursor\cursor-toggle-blur-outline.png" alt="blur" class="w-[32px] h-[32px] min-w-[32px] min-h-[32px]"></li>
             </div>
+        </div>
 
-            <div id="notificationBox" class="absolute rounded-md top-0 w-[240px] max-md:w-[250px] h-[0px] overflow-x-hidden overflow-y-scroll bg-neutral-100 border-none border-transparent dark:border-[1px] dark:bg-dark-bg-up dark:border-neutral-700 shadow-md origin-bottom transition-all duration-300 ease-in-out">
+            <div id="notificationBox" class="absolute -z-[10] rounded-md -bottom-32 w-[240px] max-md:w-[250px] h-[0px] overflow-x-hidden overflow-y-scroll bg-neutral-100 border-none border-transparent dark:border-[1px] dark:bg-dark-bg-up dark:border-neutral-700 shadow-md origin-bottom transition-all duration-[400ms] ease-in-out">
 
                 <div class="w-full absolute top-0 left-0 right-0 border border-neutral-700 flex justify-between items-center px-3 py-2 bg-primary transform translate-y-0 text-white">
                     <h3 class="text-base">Notifications</h3>
@@ -619,13 +615,15 @@
                 </div>
             </div>
             
+            <div id="notifications" class="relative -bottom-0 transition-all duration-300 ease-in-out">
                 <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" class="relative flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
-                    <svg id="notifications" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 42.39"><circle cx="20.74" cy="21.66" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,17.66a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,30.66a2,2,0,0,1-3.46,0" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><circle cx="32.38" cy="5.99" r="5.99" style="fill:#ff0820"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 26.89 26.89"><circle cx="13.45" cy="13.45" r="12.95" style="fill:#262626;stroke:#4f4f4f;stroke-miterlimit:10"/><path d="M17.15,11a3.71,3.71,0,1,0-7.41,0c0,4.33-1.86,5.57-1.86,5.57H19S17.15,15.3,17.15,11" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.32354708349963px"/><path d="M14.51,19a1.23,1.23,0,0,1-1.68.45,1.15,1.15,0,0,1-.45-.45" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.32354708349963px"/></svg>
                 </li>
 
-                    <!-- <li style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer;" class="relative flex items-center ml-4 max-sm:ml-2 gap-2 cursor-pointer text-white mr-3 fill-white rounded-full">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 41.47 41.47"><circle cx="20.74" cy="20.74" r="20.74" style="fill:#1f1f1f"/><path d="M26.74,16.74a6,6,0,0,0-12,0c0,7-3,9-3,9h18s-3-2-3-9" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/><path d="M22.47,29.74a2,2,0,0,1-2.74.72,1.91,1.91,0,0,1-.72-.72" style="fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px"/></svg>
-                    </li> -->
+                <li id="red" class="absolute z-[10] -top-0 right-[12px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 9.24 9.24"><circle cx="4.62" cy="4.62" r="4.62" style="fill:#ff0820"/></svg>
+                </li>
+            </div>
 
             </div>
 

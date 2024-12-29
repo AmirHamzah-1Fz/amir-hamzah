@@ -1,25 +1,33 @@
 const notificationBox = document.getElementById('notificationBox');
 const exitChatBox = document.getElementById('exitChatBox');
 const notifications = document.getElementById("notifications");
-const notificationNone = document.getElementById('notificationNone');
+const cursorGroup = document.getElementById("cursorButton");
+const red = document.getElementById("red");
 
 function openChatBoxBottom(){
     notificationBox.classList.remove("h-[0px]");
-    notificationBox.classList.add("h-[230px]");
-    notificationBox.classList.remove("top-0");
-    notificationBox.classList.add("-top-60");
+    notificationBox.classList.add("h-[260px]");
+    notificationBox.classList.remove("-bottom-32");
+    notificationBox.classList.add("-bottom-0");
     notificationBox.classList.remove("border-none");
     notificationBox.classList.add("dark:border");
-    // notifications.classList.add("hidden");
-    // notificationNone.classList.remove("hidden");
+    notifications.classList.remove("-bottom-0");
+    notifications.classList.add("-bottom-20");
+    cursorGroup.classList.remove("-bottom-0");
+    cursorGroup.classList.add("-bottom-20");
+    red.classList.add("hidden");
 }
 function exitChatBoxBottom(){
-    notificationBox.classList.remove("h-[230px]");
+    notificationBox.classList.remove("h-[260px]");
     notificationBox.classList.add("h-[0px]");
-    notificationBox.classList.remove("-top-60");
-    notificationBox.classList.add("top-0");
+    notificationBox.classList.remove("-bottom-0");
+    notificationBox.classList.add("-bottom-32");
     notificationBox.classList.remove("dark:border");
     notificationBox.classList.add("border-none");
+    notifications.classList.remove("-bottom-20");
+    notifications.classList.add("-bottom-0");
+    cursorGroup.classList.remove("-bottom-20");
+    cursorGroup.classList.add("-bottom-0");
 }
 
 exitChatBox.addEventListener("click", () => {
