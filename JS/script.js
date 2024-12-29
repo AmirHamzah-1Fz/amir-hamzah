@@ -5,7 +5,7 @@ const notificationNone = document.getElementById('notificationNone');
 
 function openChatBoxBottom(){
     notificationBox.classList.remove("h-[0px]");
-    notificationBox.classList.add("h-[220px]");
+    notificationBox.classList.add("h-[230px]");
     notificationBox.classList.remove("top-0");
     notificationBox.classList.add("-top-60");
     notificationBox.classList.remove("border-none");
@@ -14,7 +14,7 @@ function openChatBoxBottom(){
     // notificationNone.classList.remove("hidden");
 }
 function exitChatBoxBottom(){
-    notificationBox.classList.remove("h-[220px]");
+    notificationBox.classList.remove("h-[230px]");
     notificationBox.classList.add("h-[0px]");
     notificationBox.classList.remove("-top-60");
     notificationBox.classList.add("top-0");
