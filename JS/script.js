@@ -8,6 +8,8 @@ function openChatBoxBottom(){
     notificationBox.classList.add("h-[220px]");
     notificationBox.classList.remove("top-0");
     notificationBox.classList.add("-top-60");
+    notificationBox.classList.remove("border-none");
+    notificationBox.classList.add("dark:border");
     // notifications.classList.add("hidden");
     // notificationNone.classList.remove("hidden");
 }
@@ -16,6 +18,8 @@ function exitChatBoxBottom(){
     notificationBox.classList.add("h-[0px]");
     notificationBox.classList.remove("-top-60");
     notificationBox.classList.add("top-0");
+    notificationBox.classList.remove("dark:border");
+    notificationBox.classList.add("border-none");
 }
 
 exitChatBox.addEventListener("click", () => {
