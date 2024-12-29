@@ -6,7 +6,7 @@ const red = document.getElementById("red");
 
 function openChatBoxBottom(){
     notificationBox.classList.remove("h-[0px]");
-    notificationBox.classList.add("h-[320px]");
+    notificationBox.classList.add("h-[260px]");
     notificationBox.classList.remove("-bottom-32");
     notificationBox.classList.add("-bottom-0");
     notificationBox.classList.remove("border-none");
@@ -16,9 +16,12 @@ function openChatBoxBottom(){
     cursorGroup.classList.remove("-bottom-0");
     cursorGroup.classList.add("-bottom-20");
     red.classList.add("hidden");
+    closeMessageSatu();
+    closeMessageDua();
+    closeMessageTiga();
 }
 function exitChatBoxBottom(){
-    notificationBox.classList.remove("h-[320px]");
+    notificationBox.classList.remove("h-[260px]");
     notificationBox.classList.add("h-[0px]");
     notificationBox.classList.remove("-bottom-0");
     notificationBox.classList.add("-bottom-32");
@@ -497,35 +500,72 @@ cursorBlurOff.addEventListener("click", () => {
     amimir.classList.add("hidden");
 })
 
-const unsupportedInfo = document.getElementById("unsupportedInfo");
-const exitUnsupportedInfo = document.getElementById("exitUnsupportedInfo");
 const cursorDefaultUs = document.getElementById("cursorDefaultToggleOffUs");
 const cursorGlassUs = document.getElementById("cursorGlassToggleOnUs");
 const cursorBlurUs = document.getElementById("cursorBlurToggleOffUs");
 
-exitUnsupportedInfo.addEventListener("click", () => {
-    unsupportedInfo.classList.remove("scale-[1]");
-    unsupportedInfo.classList.add("scale-[0]");
-    exitUnsupportedInfo.classList.remove("scale-[1]");
-    exitUnsupportedInfo.classList.add("scale-[0]");
-})
+const unsupportedAlertBottomSatu = document.getElementById("unsupportedAlertBottomSatu");
+const unsupportedAlertBottomDua = document.getElementById("unsupportedAlertBottomDua");
+const unsupportedAlertBottomTiga = document.getElementById("unsupportedAlertBottomTiga");
+const tracingBoxMessageSatu = document.getElementById("tracingBoxMessageSatu");
+const tracingBoxMessageDua = document.getElementById("tracingBoxMessageDua");
+const tracingBoxMessageTiga = document.getElementById("tracingBoxMessageTiga");
+
+function openMessageSatu(){
+    unsupportedAlertBottomSatu.classList.remove("opacity-[0%]");
+    unsupportedAlertBottomSatu.classList.add("opacity-[100%]");
+    tracingBoxMessageSatu.classList.remove("opacity-[0%]");
+    tracingBoxMessageSatu.classList.add("opacity-[100%]");
+}
+
+function openMessageDua(){
+    unsupportedAlertBottomDua.classList.remove("opacity-[0%]");
+    unsupportedAlertBottomDua.classList.add("opacity-[100%]");
+    tracingBoxMessageDua.classList.remove("opacity-[0%]");
+    tracingBoxMessageDua.classList.add("opacity-[100%]");
+}
+
+function openMessageTiga(){
+    unsupportedAlertBottomTiga.classList.remove("opacity-[0%]");
+    unsupportedAlertBottomTiga.classList.add("opacity-[100%]");
+    tracingBoxMessageTiga.classList.remove("opacity-[0%]");
+    tracingBoxMessageTiga.classList.add("opacity-[100%]");
+}
+
+function closeMessageSatu(){
+    unsupportedAlertBottomSatu.classList.remove("opacity-[100%]");
+    unsupportedAlertBottomSatu.classList.add("opacity-[0%]");
+    tracingBoxMessageSatu.classList.remove("opacity-[100%]");
+    tracingBoxMessageSatu.classList.add("opacity-[0%]");
+}
+
+function closeMessageDua(){
+    unsupportedAlertBottomDua.classList.remove("opacity-[100%]");
+    unsupportedAlertBottomDua.classList.add("opacity-[0%]");
+    tracingBoxMessageDua.classList.remove("opacity-[100%]");
+    tracingBoxMessageDua.classList.add("opacity-[0%]");
+}
+
+function closeMessageTiga(){
+    unsupportedAlertBottomTiga.classList.remove("opacity-[100%]");
+    unsupportedAlertBottomTiga.classList.add("opacity-[0%]");
+    tracingBoxMessageTiga.classList.remove("opacity-[100%]");
+    tracingBoxMessageTiga.classList.add("opacity-[0%]");
+}
 
 cursorDefaultUs.addEventListener("click", function(){
-    unsupportedInfo.classList.remove("scale-[0]");
-    unsupportedInfo.classList.add("scale-[1]");
-    exitUnsupportedInfo.classList.remove("scale-[0]");
-    exitUnsupportedInfo.classList.add("scale-[1]");
+    openMessageSatu()
+    closeMessageDua()
+    closeMessageTiga()
 })
 
 cursorGlassUs.addEventListener("click", function(){
-    unsupportedInfo.classList.remove("scale-[0]");
-    unsupportedInfo.classList.add("scale-[1]");
-    exitUnsupportedInfo.classList.remove("scale-[0]");
-    exitUnsupportedInfo.classList.add("scale-[1]");
+    openMessageDua()
+    closeMessageSatu()
+    closeMessageTiga()
 })
 cursorBlurUs.addEventListener("click", function(){
-    unsupportedInfo.classList.remove("scale-[0]");
-    unsupportedInfo.classList.add("scale-[1]");
-    exitUnsupportedInfo.classList.remove("scale-[0]");
-    exitUnsupportedInfo.classList.add("scale-[1]");
+    openMessageTiga()
+    closeMessageDua()
+    closeMessageSatu()
 })
