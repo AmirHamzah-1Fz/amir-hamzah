@@ -8,6 +8,9 @@ module.exports = {
     },
     extend: {
       colors: {
+        prettier: {
+          tailwindConfig: './tailwind.config.js',
+        },
         'primary': '#1f1f1f',
         'secondary': '#0f172a',
         'fade': '#64748b',
