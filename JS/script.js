@@ -578,8 +578,108 @@ cursorBlurUs.addEventListener("click", function(){
 
 const projectOverlayOne = document.getElementById("projectOverlayOne");
 const projectOverviewOne = document.getElementById("projectOverviewOne");
+const imgProjectOne = document.getElementById("imgProjectOne");
+const projectContainerOne = document.getElementById("projectContainerOne");
 
-projectOverviewOne.addEventListener("click", function(){
+function showOverlayOne(){
+    projectOverlayOne.classList.remove("-bottom-[100%]");
+    projectOverlayOne.classList.add("bottom-[0%]");
+    projectContainerOne.classList.remove("grayscale-0");
+    projectContainerOne.classList.add("grayscale");
+}
+
+function exitOverlayOne(){
     projectOverlayOne.classList.remove("bottom-[0%]");
     projectOverlayOne.classList.add("-bottom-[100%]");
+    projectContainerOne.classList.remove("grayscale");
+    projectContainerOne.classList.add("grayscale-0");
+}
+
+projectOverviewOne.addEventListener("click", function(){
+    exitOverlayOne()
+})
+
+imgProjectOne.addEventListener("click", function() {
+    showOverlayOne()
+})
+
+const projectOverlayTwo = document.getElementById("projectOverlayTwo");
+const projectOverviewTwo = document.getElementById("projectOverviewTwo");
+const imgProjectTwo = document.getElementById("imgProjectTwo");
+const projectContainerTwo = document.getElementById("projectContainerTwo");
+
+function showOverlayTwo(){
+    projectOverlayTwo.classList.remove("-bottom-[100%]");
+    projectOverlayTwo.classList.add("bottom-[0%]");
+    projectContainerTwo.classList.remove("grayscale-0");
+    projectContainerTwo.classList.add("grayscale");
+}
+
+function exitOverlayTwo(){
+    projectOverlayTwo.classList.remove("bottom-[0%]");
+    projectOverlayTwo.classList.add("-bottom-[100%]");
+    projectContainerTwo.classList.remove("grayscale");
+    projectContainerTwo.classList.add("grayscale-0");
+}
+
+projectOverviewTwo.addEventListener("click", function(){
+    exitOverlayTwo()
+})
+
+imgProjectTwo.addEventListener("click", function() {
+    showOverlayTwo()
+})
+
+const projectOverlayThree = document.getElementById("projectOverlayThree");
+const projectOverviewThree = document.getElementById("projectOverviewThree");
+const imgProjectThree = document.getElementById("imgProjectThree");
+const projectContainerThree = document.getElementById("projectContainerThree");
+
+function showOverlayThree(){
+    projectOverlayThree.classList.remove("-bottom-[100%]");
+    projectOverlayThree.classList.add("bottom-[0%]");
+    projectContainerThree.classList.remove("grayscale-0");
+    projectContainerThree.classList.add("grayscale");
+}
+
+function exitOverlayThree(){
+    projectOverlayThree.classList.remove("bottom-[0%]");
+    projectOverlayThree.classList.add("-bottom-[100%]");
+    projectContainerThree.classList.remove("grayscale");
+    projectContainerThree.classList.add("grayscale-0");
+}
+
+projectOverviewThree.addEventListener("click", function(){
+    exitOverlayThree()
+})
+
+imgProjectThree.addEventListener("click", function() {
+    showOverlayThree()
+})
+
+const projectOverlayFour = document.getElementById("projectOverlayFour");
+const projectOverviewFour = document.getElementById("projectOverviewFour");
+const imgProjectFour = document.getElementById("imgProjectFour");
+const projectContainerFour = document.getElementById("projectContainerFour");
+
+function showOverlayFour(){
+    projectOverlayFour.classList.remove("-bottom-[100%]");
+    projectOverlayFour.classList.add("bottom-[0%]");
+    projectContainerFour.classList.remove("grayscale-0");
+    projectContainerFour.classList.add("grayscale");
+}
+
+function exitOverlayFour(){
+    projectOverlayFour.classList.remove("bottom-[0%]");
+    projectOverlayFour.classList.add("-bottom-[100%]");
+    projectContainerFour.classList.remove("grayscale");
+    projectContainerFour.classList.add("grayscale-0");
+}
+
+projectOverviewFour.addEventListener("click", function(){
+    exitOverlayFour()
+})
+
+imgProjectFour.addEventListener("click", function() {
+    showOverlayFour()
 })
