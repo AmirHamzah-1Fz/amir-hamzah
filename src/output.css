@@ -918,6 +918,10 @@ video {
   max-height: 280px;
 }
 
+.min-h-\[100\%\] {
+  min-height: 100%;
+}
+
 .min-h-\[100vh\] {
   min-height: 100vh;
 }
@@ -936,10 +940,6 @@ video {
 
 .min-h-\[600px\] {
   min-height: 600px;
-}
-
-.min-h-\[100\%\] {
-  min-height: 100%;
 }
 
 .w-1\/2 {
@@ -1555,8 +1555,8 @@ video {
   line-height: 2.25rem;
 }
 
-.text-5xl {
-  font-size: 3rem;
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -2153,6 +2153,15 @@ video {
 
   .max-md\:pt-6 {
     padding-top: 1.5rem;
+  }
+
+  .max-md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .max-md\:leading-normal {
+    line-height: 1.5;
   }
 
   .max-md\:backdrop-blur-md {
