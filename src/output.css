@@ -948,6 +948,10 @@ video {
   min-height: 600px;
 }
 
+.min-h-\[290px\] {
+  min-height: 290px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -1015,6 +1019,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-2\/3 {
+  width: 66.666667%;
 }
 
 .min-w-\[100vw\] {
@@ -1428,6 +1436,10 @@ video {
   --tw-gradient-to-position: 100%;
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
 .bg-center {
   background-position: center;
 }
@@ -1590,6 +1602,11 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .font-bold {
