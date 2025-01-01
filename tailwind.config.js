@@ -7,6 +7,9 @@ module.exports = {
       center: true,
     },
     extend: {
+      screens: {
+        phone: '440px',
+      },
       colors: {
         prettier: {
           tailwindConfig: './tailwind.config.js',
