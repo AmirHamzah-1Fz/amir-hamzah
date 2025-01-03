@@ -6,6 +6,7 @@
     <title>Amir Hamzah | About</title>
     <link rel="stylesheet" href="./src/output.css">
     <link rel="icon" type="image/png" href="assets\gfx\logo\my logo\Logo A 2Logo A 2.png"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <!-- FONT INISIALIZATION -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -617,15 +618,18 @@
                 <p class="text-base font-normal text-center mt-3 text-neutral-500">Feel free to contact me or just to say hi.</p>
                 
                 <div class="w-full flex justify-center items-start content-start mt-6 flex-col">
-                    <label for="text" class="text-xl font-medium dark:text-dark-el">Your Name</label>
-                    <input type="text" id="name" class="w-full h-[40px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
-                    
-                    <label for="email" class="text-xl font-medium dark:text-dark-el">Email</label>
-                    <input type="email" id="email" class="w-full h-[40px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
-
-                    <label for="message" class="text-xl font-medium dark:text-dark-el">Your Message</label>
-                    <input type="text" id="message" class="w-full h-[100px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
-                    <button type="submit" id="submitContact" class="w-fit px-3 py-1 bg-primary border hover:bg-transparent hover:border-primary hover:text-primary rounded-md text-white transition duration-300 ease-in-out">Submit</button>
+                    <form id="contactForm">
+                        <label for="text" class="text-xl font-medium dark:text-dark-el">Your Name</label>
+                        <input type="text" id="name" class="w-full h-[40px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
+                        
+                        <label for="email" class="text-xl font-medium dark:text-dark-el">Email</label>
+                        <input type="email" id="email" class="w-full h-[40px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
+                        
+                        <label for="message" class="text-xl font-medium dark:text-dark-el">Your Message</label>
+                        <input type="text" id="message" class="w-full h-[100px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
+                        
+                        <button type="submit" id="submitButton" class="w-fit px-3 py-1 bg-primary border hover:bg-transparent hover:border-primary hover:text-primary rounded-md text-white transition duration-300 ease-in-out">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -847,5 +851,30 @@
     
 
     <script src="./JS/script.js"></script>
+    <script>
+        (function() {
+            emailjs.init('sAetfKVf0mc6j51rA');
+        })();
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            emailjs.send('service_1ec60zn', 'template_n578sun', {
+                from_name: name,
+                from_email: email,
+                message: message
+            }).then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Email sent successfully!');
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send email. Please try again later.');
+            });
+        });
+    </script>
 </body>
 </html>
