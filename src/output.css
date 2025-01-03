@@ -1525,8 +1525,20 @@ video {
   fill: #fff;
 }
 
+.fill-none {
+  fill: none;
+}
+
 .stroke-white {
   stroke: #fff;
+}
+
+.stroke-1 {
+  stroke-width: 1;
+}
+
+.stroke-0 {
+  stroke-width: 0;
 }
 
 .object-cover {
@@ -2259,6 +2271,10 @@ video {
 @media not all and (min-width: 768px) {
   .max-md\:right-4 {
     right: 1rem;
+  }
+
+  .max-md\:-bottom-28 {
+    bottom: -7rem;
   }
 
   .max-md\:mb-10 {
