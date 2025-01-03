@@ -651,7 +651,7 @@
 
 <div class="w-full relative flex justify-center">
 
-    <div class="w-[500px] max-md:w-[310px] fixed -top-48 z-[9999] px-4 py-3 bg-primary border border-neutral-700 rounded-lg mb-4 transition-all duration-500 ease-in-out" id="successfully">
+    <div class="w-[500px] max-md:w-[310px] max-sm:w-[280px] fixed -top-48 z-[9999] px-4 py-3 bg-primary border border-neutral-700 rounded-lg mb-4 transition-all duration-500 ease-in-out" id="successfully">
         <div class="w-full flex justify-between items-center max-md:items-start">
             <div class="flex-col">
                 <h2 class="text-lg font-bold text-white">Message Sent Succesfully!</h2>
@@ -914,6 +914,7 @@
                 console.log('SUCCESS!', response.status, response.text);
                 alertSuccessBox.classList.remove("-top-48");
                 alertSuccessBox.classList.add("top-4");
+                
                 exitAlertSuccessFully.addEventListener('click', function() {
                     alertSuccessBox.classList.remove("top-4");
                     alertSuccessBox.classList.add("-top-48");
