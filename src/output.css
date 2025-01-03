@@ -1529,6 +1529,10 @@ video {
   fill: none;
 }
 
+.fill-primary {
+  fill: #1f1f1f;
+}
+
 .stroke-white {
   stroke: #fff;
 }
@@ -1953,6 +1957,10 @@ video {
 
 .duration-\[650ms\] {
   transition-duration: 650ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
 }
 
 .ease-in-out {
