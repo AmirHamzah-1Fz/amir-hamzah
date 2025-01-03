@@ -618,15 +618,28 @@
                 <p class="text-base font-normal text-center mt-3 text-neutral-500">Feel free to contact me or just to say hi.</p>
                 
                 <div class="w-full flex justify-center items-start content-start mt-6 flex-col">
-                    <form id="contactForm">
+                    <form id="contactForm" class="w-full flex flex-col justify-center items-start content-start">
                         <label for="text" class="text-xl font-medium dark:text-dark-el">Your Name</label>
-                        <input type="text" id="name" class="w-full h-[40px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
+                        <input type="text" id="name" class="w-full h-[40px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el" required>
+
+                        <div class="w-full relative px-4 py-3 bg-primary rounded-md mb-4 hidden" id="errorName">
+                            <div class="w-full flex justify-between items-center max-md:items-start">
+                                <div class="flex-col">
+                                    <h2 class="text-lg font-bold text-white">Error :v</h2>
+                                    <p class="text-neutral-300">Name must be a string with a maximum of 30 characters and no symbols.<span class="mt-1 block text-sm text-neutral-500">Nama tidak boleh menyertakan simbol dengan maksimal 30 karakter.</span></p>
+                                </div>
+
+                                <div style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer" id="exitNameError" class="p-3 hover:bg-dark-bg-up border border-neutral-700 rounded-md">
+                                    <img src="assets\gfx\ui\exit.svg" width="24px" height="24px" alt="exit" class="invert">
+                                </div>
+                            </div>
+                        </div>
                         
-                        <label for="email" class="text-xl font-medium dark:text-dark-el">Email</label>
+                        <label for="email" class="text-xl font-medium dark:text-dark-el">Email (optional)</label>
                         <input type="email" id="email" class="w-full h-[40px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
                         
                         <label for="message" class="text-xl font-medium dark:text-dark-el">Your Message</label>
-                        <input type="text" id="message" class="w-full h-[100px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el">
+                        <input type="text" id="message" class="w-full h-[100px] mb-4 px-4 dark:bg-dark-bg-up bg-neutral-200 rounded-md focus:outline-neutral-300 dark:text-dark-el" required>
                         
                         <button type="submit" id="submitButton" class="w-fit px-3 py-1 bg-primary border hover:bg-transparent hover:border-primary hover:text-primary rounded-md text-white transition duration-300 ease-in-out">Submit</button>
                     </form>
@@ -635,6 +648,22 @@
         </div>
     </div>
 </section>
+
+<div class="w-full relative flex justify-center">
+
+    <div class="w-[500px] max-md:w-[310px] fixed -top-48 z-[9999] px-4 py-3 bg-primary border border-neutral-700 rounded-lg mb-4 transition-all duration-500 ease-in-out" id="successfully">
+        <div class="w-full flex justify-between items-center max-md:items-start">
+            <div class="flex-col">
+                <h2 class="text-lg font-bold text-white">Message Sent Succesfully!</h2>
+                <p class="text-neutral-300">Thank you for your message. I'll get back to you soon!</p>
+            </div>
+
+            <div style="cursor: url('./assets/gfx/icons/Cursor/cursor-pointer.png'), pointer" id="exitSuccesfully" class="p-3 hover:bg-dark-bg-up border border-neutral-700 rounded-md">
+                <img src="assets\gfx\ui\exit.svg" width="24px" height="24px" alt="exit" class="invert">
+            </div>
+        </div>
+    </div>
+</div>
 
 <footer class="min-w-[100vw] relative z-[9995]">
     <section id="footer" class="w-full">
@@ -862,6 +891,20 @@
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const message = document.getElementById('message').value;
+            const alertNameError = document.getElementById('errorName');
+            const alertSuccessBox = document.getElementById('successfully');
+            const exitAlertSuccessFully = document.getElementById('exitSuccesfully');
+            const exitNameError = document.getElementById('exitNameError');
+
+            // Validasi nama
+            const nameRegex = /^[a-zA-Z\s]{1,30}$/;
+            if (!nameRegex.test(name)) {
+                alertNameError.classList.remove("hidden");
+                exitNameError.addEventListener('click', function() {
+                    alertNameError.classList.add("hidden");
+                });
+                return; // Jangan kirim pesan jika validasi gagal
+            }
 
             emailjs.send('service_1ec60zn', 'template_n578sun', {
                 from_name: name,
@@ -869,10 +912,15 @@
                 message: message
             }).then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
-                alert('Email sent successfully!');
+                alertSuccessBox.classList.remove("-top-48");
+                alertSuccessBox.classList.add("top-4");
+                exitAlertSuccessFully.addEventListener('click', function() {
+                    alertSuccessBox.classList.remove("top-4");
+                    alertSuccessBox.classList.add("-top-48");
+                });
             }, function(error) {
                 console.log('FAILED...', error);
-                alert('Failed to send email. Please try again later.');
+                alert("error unexpected");
             });
         });
     </script>
