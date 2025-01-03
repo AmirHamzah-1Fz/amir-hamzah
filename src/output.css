@@ -2486,6 +2486,14 @@ video {
     padding-top: 7rem;
   }
 
+  .max-md\:pt-2 {
+    padding-top: 0.5rem;
+  }
+
+  .max-md\:pt-24 {
+    padding-top: 6rem;
+  }
+
   .max-md\:text-center {
     text-align: center;
   }
