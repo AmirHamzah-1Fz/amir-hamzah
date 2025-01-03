@@ -724,6 +724,10 @@ video {
   top: 1.75rem;
 }
 
+.-bottom-28 {
+  bottom: -7rem;
+}
+
 .-z-\[10\] {
   z-index: -10;
 }
