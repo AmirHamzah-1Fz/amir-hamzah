@@ -1,2 +1,2 @@
 Link to pages :
-https://amirhamzah133.github.io/amir-hamzah/
+https://amirhamzah-1fz.github.io/amir-hamzah/
