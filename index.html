@@ -941,6 +941,11 @@
                 console.log('SUCCESS!', response.status, response.text);
                 alertSuccessBox.classList.remove("-top-48");
                 alertSuccessBox.classList.add("top-4");
+
+                setTimeout(() => {
+                    alertSuccessBox.classList.remove("top-4");
+                    alertSuccessBox.classList.add("-top-48");
+                }, 3000);
                 
                 exitAlertSuccessFully.addEventListener('click', function() {
                     alertSuccessBox.classList.remove("top-4");
